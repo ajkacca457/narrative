@@ -2,7 +2,7 @@ import React from 'react'
 
 const Notes = () => {
   return (
-    <div className='w-4/6 mx-auto grid grid-cols-5 gap-4'>
+    <div className='w-4/6 mx-auto grid grid-cols-5 gap-4 mb-[15vh]'>
         <div className='bg-yellow-600 w-full h-[15vh] flex flex-col justify-center items-center'>
             <h3 className='text-dark-blue font-semibold text-3xl'>Ideation</h3>
         </div>
