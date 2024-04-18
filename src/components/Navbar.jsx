@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className='col-span-4'>
             {navbardata.map((item, index) => {
                 return(
-                    <NavLink key={index} to={item.path} activeClassName='text-red-500'>{item.name}</NavLink>
+                    <NavLink key={index} to={item.path} activeClassName='text-red-500' className="text-dark-purple mx-6">{item.name}</NavLink>
                 )
             })}
         </div>

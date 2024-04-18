@@ -13,6 +13,7 @@ export default {
       colors: {
         'dark-blue': '#001c91',
         'dark-pink': '#ff52f7',
+        'dark-purple':'#3b1486'
       },
     },
   },
