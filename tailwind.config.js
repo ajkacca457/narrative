@@ -7,7 +7,12 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        'primary': '#fcfcf4'
+        'primary': '#fcfcf4',
+        'dark-blue': '#001c91',
+      },
+      colors: {
+        'dark-blue': '#001c91',
+        'dark-pink': '#ff52f7',
       },
     },
   },
