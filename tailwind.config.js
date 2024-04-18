@@ -9,6 +9,7 @@ export default {
       backgroundColor: {
         'primary': '#fcfcf4',
         'dark-blue': '#001c91',
+        'dark-pink': '#ff52f7',
       },
       colors: {
         'dark-blue': '#001c91',
