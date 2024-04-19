@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='w-screen h-[90vh] flex flex-col justify-center items-center'>
+    <div className='w-screen h-screen flex flex-col justify-center items-center'>
         <h1 className='text-7xl text-dark-blue font-bold w-2/4 mx-auto text-center'>Welcome to <span className='text-dark-pink'>Narrative</span>. Crafting your Social Media Success Story</h1>
         <p className='w-2/5 text-center my-[50px] text-dark-purple'>At Narrative, as a premier social media marketing agency, we understand the power of storytelling in capturing attention, fostering engagement, and driving conversions.</p>
         <div>
