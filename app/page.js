@@ -1,6 +1,7 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import ProjectDisplay from "./components/ProjectDisplay";
+import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
+import ProjectDisplay from "./components/ProjectDisplay.jsx";
+import TextHighlight from "./components/TextHighlight.jsx";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <Hero />
         <About />
         <ProjectDisplay />
+        <TextHighlight />
     </div>
   );
 }
