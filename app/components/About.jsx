@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div className='bg-black'>
+        <div className='bg-[#292929]'>
             <div className='max-w-[90rem] w-[90%] mx-auto pt-[50vh] pb-[20vh] mt-[-30vh]'>
 
                 <div className='grid grid-cols-4'>

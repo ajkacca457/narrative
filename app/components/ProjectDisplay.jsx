@@ -27,7 +27,7 @@ const ProjectData = [
 
 const ProjectDisplay = () => {
   return (
-    <div className='bg-black'>
+    <div className='bg-[#292929]'>
 
         <div className='max-w-[90rem] w-[90%] mx-auto py-[10vh]'>
             <div className='grid grid-cols-2 gap-10'>
