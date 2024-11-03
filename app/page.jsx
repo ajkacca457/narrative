@@ -12,10 +12,10 @@ export default function Home() {
         <Hero />
         <About />
         <ProjectDisplay />
-        <TextHighlight settings={{bgClass:"bg-[#292929]", textClass:"text-white", showButton:false}}/>
+        <TextHighlight settings={{bgClass:"bg-[#D1CCE6]", textClass:"text-white", showButton:false}}/>
         <Testimonial />
         <ImageLink />
-        <TextHighlight settings={{bgClass:"bg-[#F3FDB8]", textClass:"text-black", showButton:true}}/>
+        <TextHighlight settings={{bgClass:"bg-[#D1CCE6]", textClass:"text-black", showButton:true}}/>
         <Footer />
     </div>
   );
