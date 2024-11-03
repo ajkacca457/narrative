@@ -1,13 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <div className="max-w-[90rem] mx-auto w-[90%] flex justify-between items-center py-4">
+    <div className="max-w-[90rem] mx-auto w-[90%] flex justify-between items-center py-4 text-white">
       <h2 className="text-2xl font-bold">Narrative.</h2>
       <div>
         <ul className="flex gap-x-4">

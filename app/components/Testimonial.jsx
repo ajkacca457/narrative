@@ -25,7 +25,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="bg-[#292929]">
+    <div>
       <div className="max-w-[90rem] w-[90%] mx-auto py-[20vh]">
         <Carousel
           swipeable={false}

@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-gradient-to-br from-[#D1CCE6] via-[#E2D7EA] to-[#A59BD4]`}
+        className={`antialiased bg-gradient-to-br from-[#0A3635] via-[#3A6B68] to-[#0A3635]`}
       >
         <main>
           <Navbar />
