@@ -29,12 +29,12 @@ const Footer = () => {
 
           <div className="col-span-1 col-start-4">
             <h2 className="text-xl">Contact Us</h2>
-            <div class="paragraph-0-9">
-              <a href="tel:+441273921215" class="u-text-black">
+            <div className="paragraph-0-9">
+              <a href="tel:+441273921215" className="u-text-black">
                 +44(0) 1273 921 215
               </a>{" "}
               <br />‍
-              <a href="mailto:‍studio@buffmotion.com" class="u-text-black">
+              <a href="mailto:‍studio@buffmotion.com" className="u-text-black">
                 studio@buffmotion.com
               </a>
             </div>
@@ -51,12 +51,12 @@ const Footer = () => {
 
           <div className="col-span-1 col-start-4">
             <h2 className="text-xl">Contact Us</h2>
-            <div class="paragraph-0-9">
-              <a href="tel:+441273921215" class="u-text-black">
+            <div className="paragraph-0-9">
+              <a href="tel:+441273921215" className="u-text-black">
                 +44(0) 1273 921 215
               </a>{" "}
               <br />‍
-              <a href="mailto:‍studio@buffmotion.com" class="u-text-black">
+              <a href="mailto:‍studio@buffmotion.com" className="u-text-black">
                 studio@buffmotion.com
               </a>
             </div>
