@@ -1,29 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
-    return (
-        <div>
-            <div className='max-w-[90rem] w-[90%] mx-auto pt-[5vh] pb-[20vh]'>
-
-                <div className='grid grid-cols-4'>
-                    <h1 className='text-8xl col-span-3'>From illustration to
-                        animation, scripting to
-                        sound design, we love
-                        ‍all things motion.</h1>
-                </div>
-
-                <div className='grid grid-cols-3 mt-10'>
-                    <div className='col-span-1 col-start-3'>
-                        <p className='text-white mt-10 text-2xl mb-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc non aliquet ultricies, libero
-                            metus ultricies mi, auctor ultricies erat ligula nec ex. Sed euismod, nunc non aliquet ultricies, libero
-                            met
-                        </p>
-                        <a href='#' className='text-white text-xl underline'>Learn more</a>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div>
+      <div className="max-w-[90rem] w-[90%] mx-auto py-[10vh] about">
+        <div className="grid grid-cols-4">
+          <h1 className="text-8xl col-span-3">
+            We fuel organic growth enhancing your brand’s <span className="font-bold">identity</span>, driving
+            real <span className="font-bold">engagement</span>, and generating <span className="font-bold">leads</span> across all <span className="font-bold">social media
+            platforms</span>.
+          </h1>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default About
+export default About;
