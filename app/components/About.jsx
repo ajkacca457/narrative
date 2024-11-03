@@ -12,7 +12,7 @@ const About = () => {
       >
         <source src="/communication.mp4" type="video/mp4" />
       </video>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0A3635] via-[#3A6B68] to-[#0A3635] opacity-90"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[#343434] opacity-[95%]"></div>
       <div className="max-w-[90rem] w-[90%] min-h-[100vh] mx-auto about relative">
         <div className="grid grid-cols-4 absolute w-full h-full top-0 left-0 z-30 py-[10vh]">
           <h1 className="text-8xl col-span-3">
