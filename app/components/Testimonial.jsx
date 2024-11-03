@@ -9,13 +9,13 @@ const Testimonial = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 3, // optional, default to 1.
+      items: 2,
+      slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -26,7 +26,17 @@ const Testimonial = () => {
 
   return (
     <div className="bg-[#343434]">
-      <div className="max-w-[90rem] w-[90%] mx-auto py-[20vh]">
+      <div className="max-w-[90rem] w-[90%] mx-auto py-[10vh]">
+
+      <h1 className="text-6xl text-white mb-10">Reviews</h1>
+
+        <div className="grid grid-cols-5">
+
+        <div className="col-span-2">
+          <h1>This will show the aggregate review</h1>
+
+        </div>
+
         <Carousel
           swipeable={false}
           draggable={false}
@@ -43,6 +53,7 @@ const Testimonial = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
+          className="col-span-3"
         >
           <div className="min-h-[300px] m-4 text-white">
             <p>
@@ -84,6 +95,7 @@ const Testimonial = () => {
             </p>
           </div>
         </Carousel>
+        </div>
       </div>
     </div>
   );
