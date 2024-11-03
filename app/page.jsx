@@ -8,6 +8,7 @@ import Slider from "./components/Slider.jsx";
 import Reveal from "./components/Reveal.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
+import Faq from "./components/Faq.jsx";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Reveal {...whatWeDo} />
         <Projects />
         <Testimonial />
+        <Faq />
         <Contact />
         <Footer />
     </div>

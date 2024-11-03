@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="py-[10vh]">
-      <div className="max-w-[80rem] w-[70%] mx-auto bg-[#343434] p-8 rounded-lg">
+      <div className="max-w-[80rem] w-[70%] mx-auto bg-[#343434] px-8 py-12 rounded-lg">
         <h1 className="text-6xl text-white mb-10 text-center">Got Questions?</h1>
         <p className="text-white text-center my-10">Customer support is our highest priority. We are here to answer all your questions via our support docs. Video demos, and 24/7 live chat</p>
         <div className="w-full grid grid-cols-3 gap-x-4">
