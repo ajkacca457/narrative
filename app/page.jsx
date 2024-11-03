@@ -6,6 +6,7 @@ import { data, whatWeDo } from "./data/data.js";
 import Testimonial from "./components/Testimonial.jsx";
 import Slider from "./components/Slider.jsx";
 import Reveal from "./components/Reveal.jsx";
+import Projects from "./components/Projects.jsx";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <TextGrid {...data} />
         <Slider />
         <Reveal {...whatWeDo} />
+        <Projects />
         <Testimonial />
         <Footer />
     </div>
