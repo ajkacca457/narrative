@@ -14,6 +14,31 @@
   body {
     font-family: 'Freigeist Regular';
   }
+.carousel-container::-webkit-scrollbar {
+  height: 8px; 
+  background-color: transparent;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background-color: #e0e0e0; 
+  border-radius: 4px; 
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background-color: #16161d; 
+  border-radius: 4px; 
+  border: 2px solid #e0e0e0;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background-color: #16161d;
+}
+
+.carousel-container {
+  scrollbar-width: thin; 
+  scrollbar-color: #16161d #e0e0e0;
+}
+
 }
 
 
