@@ -15,6 +15,9 @@ const Faq = () => {
         >
           FAQS
         </h1>
+        <p className="text-white text-center text-[16px] opacity-60 mb-10">
+          Orci at id enim eu pellentesque habitant. Ut at diam suscipit amet id cursus id blandit. Consectetur maecenas id vivamus integer integer aliquam. Donec amet rhoncus ut turpis massa augue faucibus.
+        </p>
         <div>
           <Accordion />
         </div>
