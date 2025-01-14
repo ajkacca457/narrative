@@ -83,19 +83,19 @@
     font-family: 'Gilory-Bold', sans-serif;
   }
 
-  .expertise h3 {
+  .expertise h3, .how-we-do h3 {
     font-family: 'Gilory-Light', sans-serif;
   }
 
-  .expertise .text-highlight {
+  .expertise .text-highlight,.how-we-do .text-highlight {
     font-family: 'Gilory-Bold', sans-serif;
   }
 
-  .expertise-card p {
+  .expertise-card p, .how-we-do p {
     font-family: 'Helvetica-Light', sans-serif;
   }
 
-  .expertise-card {
+  .expertise-card,.how-we-do-card {
     position: relative;
     background: rgba(255, 255, 255, 0.17);
     padding: 20px; /* Inner padding */
@@ -104,7 +104,7 @@
     z-index: 1;
   }
   
-  .expertise-card::before {
+  .expertise-card::before,.how-we-do-card::before {
     content: '';
     position: absolute;
     top: 0;
