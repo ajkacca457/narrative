@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-
 @font-face {
   font-family: 'Freigeist Regular';
   src: url("./fonts/Freigeist-Regular.otf") format("opentype");
@@ -133,7 +132,9 @@
     font-family: "Gilory-Bold", sans-serif;
   }
 
-
+  .project-card h4 {
+    font-family: "Gilory-Bold", sans-serif;
+  }
 }
 
 @layer utilities {
