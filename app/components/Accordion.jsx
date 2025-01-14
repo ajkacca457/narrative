@@ -6,18 +6,23 @@ const Accordion = () => {
   const accordionItems = [
     {
       id: 1,
-      question: 'What is Material Tailwind?',
-      answer: 'Material Tailwind is a framework that enhances Tailwind CSS with additional styles and components.'
+      question: 'How can digital marketing benefit my business?',
+      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
     },
     {
       id: 2,
-      question: 'How to use Material Tailwind?',
-      answer: 'You can use Material Tailwind by importing its components into your Tailwind CSS project.'
+      question: 'How can digital marketing benefit my business?',
+      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
     },
     {
       id: 3,
-      question: 'What can I do with Material Tailwind?',
-      answer: 'Material Tailwind allows you to quickly build modern, responsive websites with a focus on design.'
+      question: 'What digital marketing services do you offer?',
+      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
+    },
+    {
+      id: 4,
+      question: 'How long does it take to see results',
+      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
     }
   ];
 
@@ -47,8 +52,8 @@ const Accordion = () => {
       {accordionItems.map(({ id, question, answer }) => (
         <div key={id} className="border-b border-slate-200">
           <button onClick={() => toggleAccordion(id)} className="w-full flex justify-between items-center py-5 text-white">
-            <span>{question}</span>
-            <span className="text-white transition-transform duration-300">
+            <span className='text-[28px]'>{question}</span>
+            <span className="text-black bg-white p-4 rounded-full transition-transform duration-300">
               {openIndex === id ? minusSVG : plusSVG}
             </span>
           </button>
@@ -58,7 +63,7 @@ const Accordion = () => {
             }}
             className="overflow-hidden transition-all duration-300 ease-in-out"
           >
-            <div className="pb-5 text-sm text-white">
+            <div className="pb-5 text-sm text-[#929292] text-[16px]">
               {answer}
             </div>
           </div>
