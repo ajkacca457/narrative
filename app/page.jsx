@@ -1,3 +1,6 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Hero from "./components/Hero.jsx";
 import ShowReel from "./components/ShowReel.jsx";
 import Display from "./components/Display.jsx";
