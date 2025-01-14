@@ -3,7 +3,6 @@ import ShowReel from "./components/ShowReel.jsx";
 import Display from "./components/Display.jsx";
 import Expertise from "./components/Expertise.jsx";
 import Footer from "./components/Footer.jsx";
-import Testimonial from "./components/Testimonial.jsx";
 import Faq from "./components/Faq.jsx";
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
         <ShowReel />
         <Display />
         <Expertise />
-        <Testimonial />
         <Faq />
         <Footer />
     </div>
