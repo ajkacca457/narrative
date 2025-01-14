@@ -9,6 +9,7 @@ import Projects from "./components/Projects.jsx";
 import HowWeDo from "./components/HowWeDo.jsx";
 import Faq from "./components/Faq.jsx";
 import KeyFigure from "./components/KeyFigure.jsx";
+import LogoSlider from "./components/LogoSlider.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <HowWeDo />
         <Faq />
         <KeyFigure />
+        <LogoSlider />
         <Footer />
     </div>
   );
