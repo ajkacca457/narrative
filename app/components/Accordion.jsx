@@ -50,7 +50,7 @@ const Accordion = () => {
   return (
     <div className="accordion w-full col-span-2">
       {accordionItems.map(({ id, question, answer }) => (
-        <div key={id} className="border border-[#1E1E21] p-4 my-2 rounded-[30px]">
+        <div key={id} className="border border-[#1E1E21] px-10 py-4 my-2 rounded-[60px]">
           <button onClick={() => toggleAccordion(id)} className="w-full flex justify-between items-center py-5 text-white">
             <span className='text-[28px]'>{question}</span>
             <span className="text-black bg-white p-4 rounded-full transition-transform duration-300">
