@@ -15,6 +15,11 @@
 }
 
 @font-face {
+  font-family: 'Gilory-Bold';
+  src: url("./fonts/Gilroy-Bold.ttf") format("truetype");
+}
+
+@font-face {
   font-family: 'Inter-Regular';
   src: url("./fonts/Inter_28pt-Regular.ttf") format("truetype");
 }
@@ -60,6 +65,11 @@
   .show-reel h2,h3,h5,h6,p {
     font-family: 'Poppins-Regular', sans-serif;
   }
+
+  .display h1,h2,h3,h4,h5,h6 {
+    font-family: 'Gilory-Bold', sans-serif;
+  }
+
 }
 
 
