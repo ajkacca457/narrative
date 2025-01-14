@@ -5,6 +5,7 @@ import Expertise from "./components/Expertise.jsx";
 import Projects from "./components/Projects.jsx";
 import HowWeDo from "./components/HowWeDo.jsx";
 import Faq from "./components/Faq.jsx";
+import KeyFigure from "./components/KeyFigure.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <Projects />
         <HowWeDo />
         <Faq />
+        <KeyFigure />
         <Footer />
     </div>
   );
