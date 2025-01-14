@@ -34,6 +34,15 @@
 }
 
 
+@layer components {
+  .show-reel {
+    background: url('/sea-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
