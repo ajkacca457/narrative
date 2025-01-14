@@ -35,29 +35,29 @@ const Footer = () => {
           </div>
 
           <div className="col-span-3">
-            <div>
-              <h2 className="text-xl">Visit Us</h2>
-              <p className="mt-4">
-                1st Floor, 96 Church Street, Brighton, BN1 1UJ Contact Us +44(0)
-                1273 921 215 ‍studio@buffmotion.com
-              </p>
+
+            <div className="grid grid-cols-3 gap-x-4">
+              <div className="col-span-1">
+                  <div className="flex items-center gap-x-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>
+                  <div className="flex items-center gap-x-2 mt-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>
+                  <div className="flex items-center gap-x-2 mt-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>
+                  <div className="flex items-center gap-x-2 mt-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>                  
+              </div>
+
+              <div className="col-span-1">
+                <button className="bg-[#00FFE1] text-black w-fit block px-4 py-2 mt-2 rounded">Facebook</button>  
+                <button className="bg-[#00FFE1] text-black w-fit block px-4 py-2 mt-2 rounded">Instagram</button>
+              </div>
+
+              <div className="col-span-1">
+                  <div className="flex items-center gap-x-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>
+                  <div className="flex items-center gap-x-2 mt-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>
+                  <div className="flex items-center gap-x-2 mt-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>
+                  <div className="flex items-center gap-x-2 mt-2"> <img src="/green-arrow.png" /> <h3>Recent Work</h3></div>                  
+              </div>
+            
             </div>
 
-            <div>
-              <h2 className="text-xl">Contact Us</h2>
-              <div className="paragraph-0-9">
-                <a href="tel:+441273921215" className="u-text-black">
-                  +44(0) 1273 921 215
-                </a>{" "}
-                <br />‍
-                <a
-                  href="mailto:‍studio@buffmotion.com"
-                  className="u-text-black"
-                >
-                  studio@buffmotion.com
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
