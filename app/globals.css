@@ -5,7 +5,7 @@
 
 
 @font-face {
-  font-family:'Freigeist Regular';
+  font-family: 'Freigeist Regular';
   src: url("./fonts/Freigeist-Regular.otf") format("opentype");
 }
 
@@ -38,13 +38,17 @@
   font-family: 'Poppins-Regular';
   src: url("./fonts/Poppins-Regular.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: 'Helvetica-Light';
+  src: url("./fonts/helvetica-light.ttf") format("truetype");
+}
 
 
 @layer base {
   body {
     font-family: 'Inter-Regular', sans-serif;
   }
+
   h5 {
     font-family: 'Rubik-Regular', sans-serif;
   }
@@ -62,16 +66,69 @@
     font-family: 'Poppins-Extrabold', sans-serif;
   }
 
-  .show-reel h2,h3,h5,h6,p {
+  .show-reel h2,
+  h3,
+  h5,
+  h6,
+  p {
     font-family: 'Poppins-Regular', sans-serif;
   }
 
-  .display h1,h2,h3,h4,h5,h6 {
+  .display h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Gilory-Bold', sans-serif;
   }
 
-}
+  .expertise h3 {
+    font-family: 'Gilory-Light', sans-serif;
+  }
 
+  .expertise .text-highlight {
+    font-family: 'Gilory-Bold', sans-serif;
+  }
+
+  .expertise-card p {
+    font-family: 'Helvetica-Light', sans-serif;
+  }
+
+  .expertise-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.17);
+    padding: 20px; /* Inner padding */
+    border-radius: 20px;
+    overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+    z-index: 1;
+  }
+  
+  .expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; 
+    padding: 1px;
+    background: linear-gradient(
+      250.93deg,
+      rgba(255, 255, 255, 0.17) -0.16%,
+      rgba(0, 0, 0, 0.17) 65.71%
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* Exclude the center */
+    -webkit-mask-composite: destination-out; /* Safari-specific */
+    z-index: -1;
+  }
+}
 
 @layer utilities {
   .text-balance {
