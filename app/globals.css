@@ -19,10 +19,17 @@
   src: url("./fonts/Inter_28pt-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Rubik-Regular';
+  src: url("./fonts/Rubik-Regular.ttf") format("truetype");
+}
 
 @layer base {
   body {
     font-family: 'Inter-Regular', sans-serif;
+  }
+  h5 {
+    font-family: 'Rubik-Regular', sans-serif;
   }
 }
 
