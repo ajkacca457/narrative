@@ -24,6 +24,18 @@
   src: url("./fonts/Rubik-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Poppins-Extrabold';
+  src: url("./fonts/Poppins-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+
+
 @layer base {
   body {
     font-family: 'Inter-Regular', sans-serif;
@@ -39,6 +51,14 @@
     background: url('/sea-bg.jpeg');
     background-size: cover;
     background-position: center;
+  }
+
+  .show-reel h1 {
+    font-family: 'Poppins-Extrabold', sans-serif;
+  }
+
+  .show-reel h2,h3,h5,h6,p {
+    font-family: 'Poppins-Regular', sans-serif;
   }
 }
 
