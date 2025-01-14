@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-[#16161d]`}
+        className={`antialiased bg-[#131313]`}
       >
         <main>
           <Navbar />

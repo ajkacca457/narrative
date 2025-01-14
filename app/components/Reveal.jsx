@@ -8,7 +8,7 @@ const Reveal = ({ title, items }) => {
         <div className="w-full grid grid-cols-3 gap-x-4">
           {items.length > 0 &&
             items.map((item, index) => (
-              <div className="col-span-1 flex items-center relative group min-h-[300px] overflow-hidden">
+              <div key={index} className="col-span-1 flex items-center relative group min-h-[300px] overflow-hidden">
                 <div className="absolute top-0 left-0 bg-black w-full h-full flex flex-col justify-center items-center transition-all duration-200 group-hover:translate-x-[50vw]">
                   <h4 className="text-5xl text-white gap-x-4">{item.title}</h4>
                 </div>
