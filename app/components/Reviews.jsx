@@ -76,6 +76,14 @@ const Reviews = () => {
             </h2>
 
           </div>
+
+          <div className="col-span-1 flex items-center">
+            <img
+              src="/reviews/review-card.png"
+              alt="review1"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
       </div>
     </div>
