@@ -26,7 +26,6 @@ export default function Home() {
         <Faq />
         <KeyFigure />
         <LogoSlider />
-        <Footer />
     </div>
   );
 }
