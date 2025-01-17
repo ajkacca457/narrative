@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
 
             <div className="grid grid-cols-4 gap-x-4 mt-[10vh]">
-              <div className="col-span-2 flex gap-x-2">
+              <div className="col-span-2 flex items-end gap-x-2">
                 <svg
                   width="112"
                   height="81"
@@ -139,19 +139,11 @@ const Footer = () => {
               <div className="col-span-2">
                 <div className="flex items-center gap-x-2">
                   {" "}
-                  <img src="/green-arrow.png" /> <h3>Recent Work</h3>
+                  <img src="/green-arrow.png" /> <h3>( 021 ) 666 888 0000</h3>
                 </div>
                 <div className="flex items-center gap-x-2 mt-2">
                   {" "}
-                  <img src="/green-arrow.png" /> <h3>Recent Work</h3>
-                </div>
-                <div className="flex items-center gap-x-2 mt-2">
-                  {" "}
-                  <img src="/green-arrow.png" /> <h3>Recent Work</h3>
-                </div>
-                <div className="flex items-center gap-x-2 mt-2">
-                  {" "}
-                  <img src="/green-arrow.png" /> <h3>Recent Work</h3>
+                  <img src="/green-arrow.png" /> <h3>needhelp@company.com</h3>
                 </div>
               </div>
             </div>
