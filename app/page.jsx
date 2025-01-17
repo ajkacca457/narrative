@@ -11,7 +11,6 @@ import Reviews from "./components/Reviews.jsx";
 import Faq from "./components/Faq.jsx";
 import KeyFigure from "./components/KeyFigure.jsx";
 import LogoSlider from "./components/LogoSlider.jsx";
-import Footer from "./components/Footer.jsx";
 
 export default function Home() {
   return (
