@@ -2,7 +2,7 @@ import React from "react";
 
 const Reviews = () => {
   return (
-    <div className="w-full expertise h-auto py-[10vh]">
+    <div className="w-full reviews h-auto py-[10vh]">
       <div className="reviews-container w-3/4 mx-auto">
         <div className="reviews-tite flex items-center gap-x-[5vw] mb-[5vh]">
           <h3 className="text-highlight text-[75px] text-white uppercase">
