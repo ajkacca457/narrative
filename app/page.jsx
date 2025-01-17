@@ -7,6 +7,7 @@ import Display from "./components/Display.jsx";
 import Expertise from "./components/Expertise.jsx";
 import Projects from "./components/Projects.jsx";
 import HowWeDo from "./components/HowWeDo.jsx";
+import Reviews from "./components/Reviews.jsx";
 import Faq from "./components/Faq.jsx";
 import KeyFigure from "./components/KeyFigure.jsx";
 import LogoSlider from "./components/LogoSlider.jsx";
@@ -21,6 +22,7 @@ export default function Home() {
         <Expertise />
         <Projects />
         <HowWeDo />
+        <Reviews />
         <Faq />
         <KeyFigure />
         <LogoSlider />

@@ -135,6 +135,16 @@
   .project-card h4 {
     font-family: "Gilory-Bold", sans-serif;
   }
+
+
+  .reviews-container .reviews-title {
+    font-family: "Gilory-Bold", sans-serif;
+  } 
+
+  .reviews-text-title {
+    font-family: "Inter-Regular";
+  }
+
 }
 
 @layer utilities {
