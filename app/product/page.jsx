@@ -2,6 +2,7 @@ import React from 'react'
 import ProductHero from '../components/productpage/ProductHero'
 import VideoEmbed from '../components/productpage/VideoEmbed'
 import Input from '../components/productpage/Input'
+import BrandCards from '../components/productpage/BrandCards'
 
 const page = () => {
   return (
@@ -9,6 +10,7 @@ const page = () => {
         <ProductHero />
         <VideoEmbed />
         <Input />
+        <BrandCards />
     </div>
   )
 }

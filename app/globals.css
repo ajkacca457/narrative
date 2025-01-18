@@ -37,6 +37,7 @@
   font-family: 'Poppins-Regular';
   src: url("./fonts/Poppins-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: 'Helvetica-Light';
   src: url("./fonts/helvetica-light.ttf") format("truetype");
@@ -82,53 +83,60 @@
     font-family: 'Gilory-Bold', sans-serif;
   }
 
-  .expertise h3, .how-we-do h3 {
+  .expertise h3,
+  .how-we-do h3 {
     font-family: 'Gilory-Light', sans-serif;
   }
 
-  .expertise .text-highlight,.how-we-do .text-highlight {
+  .expertise .text-highlight,
+  .how-we-do .text-highlight {
     font-family: 'Gilory-Bold', sans-serif;
   }
 
-  .expertise-card p, .how-we-do p {
+  .expertise-card p,
+  .how-we-do p {
     font-family: 'Helvetica-Light', sans-serif;
   }
 
-  .expertise-card,.how-we-do-card {
+  .expertise-card,
+  .how-we-do-card {
     position: relative;
     background: rgba(255, 255, 255, 0.17);
-    padding: 20px; /* Inner padding */
+    padding: 20px;
+    /* Inner padding */
     border-radius: 20px;
-    overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+    overflow: hidden;
+    /* Ensures the pseudo-element stays within bounds */
     z-index: 1;
   }
-  
-  .expertise-card::before,.how-we-do-card::before {
+
+  .expertise-card::before,
+  .how-we-do-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 20px; 
+    border-radius: 20px;
     padding: 1px;
-    background: linear-gradient(
-      250.93deg,
-      rgba(255, 255, 255, 0.17) -0.16%,
-      rgba(0, 0, 0, 0.17) 65.71%
-    );
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
+    background: linear-gradient(250.93deg,
+        rgba(255, 255, 255, 0.17) -0.16%,
+        rgba(0, 0, 0, 0.17) 65.71%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     mask:
-      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
-    mask-composite: exclude; /* Exclude the center */
-    -webkit-mask-composite: destination-out; /* Safari-specific */
+    mask-composite: exclude;
+    /* Exclude the center */
+    -webkit-mask-composite: destination-out;
+    /* Safari-specific */
     z-index: -1;
   }
 
-  .faq h1{
+  .faq h1 {
     font-family: "Gilory-Bold", sans-serif;
   }
 
@@ -139,10 +147,21 @@
 
   .reviews-container .reviews-title {
     font-family: "Gilory-Bold", sans-serif;
-  } 
+  }
 
   .reviews-text-title {
     font-family: "Inter-Regular";
+  }
+
+  .brand-cards-title {
+    font-family: "Gilory-Bold", sans-serif;
+  }
+
+  .brand-card {
+    border: 1.5px solid green;
+    border-radius: 20px;
+    padding: 25px;
+
   }
 
 }
