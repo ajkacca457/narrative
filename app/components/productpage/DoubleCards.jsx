@@ -216,7 +216,7 @@ const DoubleCards = () => {
       </div>
 
       <div className="double-cards-container w-3/4 mx-auto grid grid-cols-2 gap-x-8">
-        <div className="double-card border-2 border-[#2D2D2D] p-8 rounded-[1rem] mt-10">
+        <div className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10">
           {cardOne.map((card) => (
             <div
               key={card.id}
@@ -229,9 +229,9 @@ const DoubleCards = () => {
             </div>
           ))}
         </div>
-        <div className="double-card border-2 border-[#2D2D2D] p-8 rounded-[1rem] mt-10">
-          <div className="text-white">
-            <div className="flex gap-x-4">
+        <div className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 flex flex-col justify-between">
+          <div className="text-white text-[36px]">
+            <div className="flex gap-x-4 items-center">
               <svg
                 width="27"
                 height="27"
@@ -491,6 +491,11 @@ const DoubleCards = () => {
               <p>Performance analysis+</p>
             </div>
           </div>
+
+          <p className="text-white text-[24px] uppercase">We offer flexible packages designed to match your unique needs. Let’s Talk and create your tailored package.</p>
+
+          <button className="bg-[#05A895] text-white w-fit mx-auto text-[32px] px-4 py-2 rounded-md mb-[10vh]">Schedule a call</button>
+
         </div>
       </div>
     </div>

@@ -199,6 +199,10 @@
   .double-cards-title {
     font-family: "Gilory-Bold", sans-serif;
   }
+
+  .double-cards-container p{
+    font-family: "Inter-Regular", sans-serif;
+  }
 }
 
 @layer utilities {
