@@ -53,6 +53,16 @@
   src: url("./fonts/PlusJakartaSans-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Urbanist-Regular';
+  src: url("./fonts/Urbanist-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
 @layer base {
   body {
     font-family: 'Inter-Regular', sans-serif;
@@ -179,6 +189,12 @@
   .square-cards-container {
     border: 1.5px solid green;
     border-radius: 2rem;
+  }
+  .testimonial-container h1 {
+    font-family: "Urbanist-Regular", sans-serif;
+  }
+  .testimonial-container p {
+    font-family: "OpenSans-Regular", sans-serif;
   }
 
 }
