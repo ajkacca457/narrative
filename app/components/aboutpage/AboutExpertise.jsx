@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutExpertise = () => {
   return (
-    <div className="w-full about-expertise-element h-auto">
+    <div className="w-full about-expertise-element h-auto py-[10vh] -mt-[30vh]">
       <div className="about-expertise-container w-2/4 mx-auto">
         <div className="grid grid-cols-2 gap-x-10">
             <div className="text-white flex flex-col gap-y-4 justify-between">
