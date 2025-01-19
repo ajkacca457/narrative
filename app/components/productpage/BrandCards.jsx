@@ -210,10 +210,10 @@ const BrandCards = () => {
           {brandCardsData.map((card) => (
             <div key={card.id} className="brand-card text-center">
               <div className="brand-card-icon">{card.icon}</div>
-              <h3 className="text-white text-[36px] font-semibold">
+              <h3 className="text-white text-[22px] font-semibold brand-card-title mt-4">
                 {card.title}
               </h3>
-              <p className="text-[#A7A7A7] mt-6">{card.description}</p>
+              <p className="text-[#A7A7A7] mt-6 text-[18px] brand-card-description">{card.description}</p>
             </div>
           ))}
         </div>

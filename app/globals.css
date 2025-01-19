@@ -43,6 +43,15 @@
   src: url("./fonts/helvetica-light.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Clash-Display';
+  src: url("./fonts/ClashDisplay-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  src: url("./fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+}
 
 @layer base {
   body {
@@ -103,10 +112,8 @@
     position: relative;
     background: rgba(255, 255, 255, 0.17);
     padding: 20px;
-    /* Inner padding */
     border-radius: 20px;
     overflow: hidden;
-    /* Ensures the pseudo-element stays within bounds */
     z-index: 1;
   }
 
@@ -162,6 +169,12 @@
     border-radius: 20px;
     padding: 25px;
 
+  }
+  .brand-card-title {
+    font-family: "Clash-Display", sans-serif;
+  }
+  .brand-card-description {
+    font-family: "PlusJakartaSans-Regular", sans-serif;
   }
 
 }
