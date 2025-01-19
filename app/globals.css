@@ -176,6 +176,10 @@
   .brand-card-description {
     font-family: "PlusJakartaSans-Regular", sans-serif;
   }
+  .square-cards-container {
+    border: 1.5px solid green;
+    border-radius: 2rem;
+  }
 
 }
 
