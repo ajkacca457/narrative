@@ -7,6 +7,7 @@ import Input from '../components/productpage/Input'
 import BrandCards from '../components/productpage/BrandCards'
 import BrandSquareCards from '../components/productpage/BrandSquareCards'
 import Testimonials from '../components/productpage/Testimonials'
+import DoubleCards from '../components/productpage/DoubleCards';
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
         <BrandCards />
         <BrandSquareCards />
         <Testimonials />
+        <DoubleCards />
     </div>
   )
 }

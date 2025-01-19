@@ -196,7 +196,9 @@
   .testimonial-container p {
     font-family: "OpenSans-Regular", sans-serif;
   }
-
+  .double-cards-title {
+    font-family: "Gilory-Bold", sans-serif;
+  }
 }
 
 @layer utilities {
