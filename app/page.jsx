@@ -35,7 +35,10 @@ export default function Home() {
         <Projects />
         <HowWeDo />
       </div>
-      <Reviews />
+      <div className="relative">
+        <div className="w-[800px] h-[800px] absolute -right-[150px] top-[250px] -z-[1] radial-light opacity-40"></div>
+        <Reviews />
+      </div>
       <Faq />
       <KeyFigure />
       <LogoSlider />
