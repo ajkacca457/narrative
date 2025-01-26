@@ -8,6 +8,7 @@ import BrandCards from "../components/productpage/BrandCards";
 import BrandSquareCards from "../components/productpage/BrandSquareCards";
 import Testimonials from "../components/productpage/Testimonials";
 import DoubleCards from "../components/productpage/DoubleCards";
+import CircularPattern from "../components/decors/CircularPattern";
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
         <div className="w-[800px] h-[800px] absolute -right-[150px] bottom-[500px] -z-[1] radial-light opacity-40"></div>
         <VideoEmbed />
         <Input />
+        <CircularPattern customClass="absolute right-[50px] bottom-[50px]" />
       </div>
       <BrandCards />
       <BrandSquareCards />
