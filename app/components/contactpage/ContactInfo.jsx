@@ -1,6 +1,6 @@
 import React from "react";
 
-const brandCardsData = [
+const contactCardsData = [
   {
     id: 1,
     icon: (
@@ -88,7 +88,7 @@ const ContactInfo = () => {
     <div className="w-full contact-cards-element h-auto pb-[20vh]">
       <div className="contact-cards-container w-3/5 mx-auto">
         <div className="grid grid-cols-3 gap-6 mt-12">
-          {brandCardsData.map((card) => (
+          {contactCardsData.map((card) => (
             <div key={card.id} className="contact-card text-center">
               <div className="contact-card-icon mx-auto w-fit">{card.icon}</div>
               <h3 className="text-white text-[28px] font-semibold mt-4 contact-card-title">
