@@ -205,7 +205,7 @@ const cardOne = [
 
 const DoubleCards = () => {
   return (
-    <div className="w-full double-cards h-auto py-[20vh]">
+    <div className="w-full double-cards h-auto py-[20vh] z-50 relative">
       <div className="double-cards-container w-3/4 mx-auto grid grid-cols-2 gap-x-8">
         <h1 className="text-white double-cards-title text-[64px]">
           Our core packages
