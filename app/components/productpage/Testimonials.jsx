@@ -87,7 +87,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="w-full testimonial h-auto py-[20vh]">
+    <div className="w-full testimonial h-auto pb-[20vh] z-50 relative">
       <div className="testimonial-container w-3/4 mx-auto">
         <p className="text-center text-blue-800 font-semibold">Testimonials</p>
         <h1 className="text-white text-center text-[85px] max-w-[18ch] mx-auto">
