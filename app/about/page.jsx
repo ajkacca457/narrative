@@ -2857,7 +2857,10 @@ const page = () => {
         />
         <AboutOurTeam />
       </div>
-      <AboutEnquery />
+
+      <div className="relative">
+        <AboutEnquery />
+      </div>
     </div>
   );
 };
