@@ -6,6 +6,7 @@ import AboutExpertise from "../components/aboutpage/AboutExpertise";
 import AboutTestimonial from "../components/aboutpage/AboutTestimonial";
 import AboutOurTeam from "../components/aboutpage/AboutOurTeam";
 import AboutEnquery from "../components/aboutpage/AboutEnquery";
+import CircularPattern from "../components/decors/CircularPattern";
 
 const page = () => {
   return (
@@ -2840,7 +2841,22 @@ const page = () => {
         </div>
         <AboutTestimonial />
       </div>
-      <AboutOurTeam />
+      <div className="relative">
+        <div className="w-[800px] h-[800px] absolute -left-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
+        <div className="w-[800px] h-[800px] absolute left-1/2 transform -translate-x-1/2 bottom-[200px] -z-[1] radial-light opacity-40"></div>
+        <CircularPattern
+          customClass="absolute left-[150px] top-[500px]"
+          width="189.5"
+          height="183"
+        />
+
+        <CircularPattern
+          customClass="absolute -right-[250px] bottom-[50px]"
+          width="600px"
+          height="600px"
+        />
+        <AboutOurTeam />
+      </div>
       <AboutEnquery />
     </div>
   );
