@@ -27,12 +27,12 @@ const squareCardsData = [
 
 const BrandSquareCards = () => {
   return (
-    <div className="w-full square-cards h-auto py-[20vh]">
+    <div className="w-full square-cards h-auto py-[20vh] z-50 relative">
       <div className="square-cards-container w-3/4 mx-auto">
 
       <div className="grid grid-cols-2 gap-6 w-4/6 mx-auto py-[20vh]">
           {squareCardsData.map((card) => (
-            <div key={card.id}  className="border-2 border-[#2D2D2D] p-8">
+            <div key={card.id}  className="border-2 border-[#2D2D2D] p-8 bg-[#2D2D2D]">
               <h3 className="text-white text-[24px] font-semibold brand-card-title mt-4">
                 {card.title}
               </h3>
