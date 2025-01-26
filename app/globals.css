@@ -250,6 +250,15 @@
     font-family: "Satoshi-Regular", sans-serif;
   }
 
+  .radial-light {
+    position: relative;
+    width: 150px;  /* Size of the light circle */
+    height: 150px;  /* Size of the light circle */
+    border-radius: 50%;  /* Circular shape */
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.8) 0%, rgba(0, 255, 255, 0) 70%);
+    filter: blur(60px);  /* Radial blur effect */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  }
 }
 
 @layer utilities {

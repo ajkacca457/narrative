@@ -1,11 +1,11 @@
 import React from "react";
 
-const CircularPattern = ({ customClass }) => {
+const CircularPattern = ({ customClass, width, height }) => {
   return (
     <div className={customClass}>
       <svg
-        width="379"
-        height="366"
+        width={width || "379"}
+        height={height || "366"}
         viewBox="0 0 379 366"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

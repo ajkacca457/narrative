@@ -11,20 +11,34 @@ import Reviews from "./components/homepage/Reviews.jsx";
 import Faq from "./components/homepage/Faq.jsx";
 import KeyFigure from "./components/homepage/KeyFigure.jsx";
 import LogoSlider from "./components/homepage/LogoSlider.jsx";
+import CircularPattern from "./components/decors/CircularPattern.jsx";
 
 export default function Home() {
   return (
-    <div>
-        <Hero />
-        <ShowReel />
-        <Display />
+    <div className="relative overflow-hidden">
+      <Hero />
+      <ShowReel />
+      <Display />
+      <div className="relative">
+        <div className="w-[800px] h-[800px] absolute -right-[50px] -top-[250px] -z-[1] radial-light opacity-40"></div>
+        <CircularPattern
+          customClass="absolute right-[250px] top-[50px]"
+          width="189.5"
+          height="183"
+        />
         <Expertise />
+      </div>
+
+      <div className="relative">
+        <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
+        <div className="w-[800px] h-[800px] absolute -right-[150px] top-[400px] -z-[1] radial-light opacity-40"></div>
         <Projects />
         <HowWeDo />
-        <Reviews />
-        <Faq />
-        <KeyFigure />
-        <LogoSlider />
+      </div>
+      <Reviews />
+      <Faq />
+      <KeyFigure />
+      <LogoSlider />
     </div>
   );
 }
