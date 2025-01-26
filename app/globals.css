@@ -121,7 +121,10 @@
   .how-we-do p {
     font-family: 'Helvetica-Light', sans-serif;
   }
-
+  .expertise-card-title {
+    font-family: 'Gilory-Bold', sans-serif;
+  }
+  
   .expertise-card,
   .how-we-do-card {
     position: relative;

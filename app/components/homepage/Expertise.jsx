@@ -38,7 +38,7 @@ const Expertise = () => {
           <div className="expertise-content grid grid-cols-1 md:grid-cols-3 gap-x-4">
             {expertiseData.map((data) => (
               <div key={data.id} className="expertise-card expertise-gradient text-center text-white p-[25px] rounded-[20px]">
-                <h4 className="text-[40px] uppercase mb-10">{data.title}</h4>
+                <h4 className="text-[40px] uppercase mb-10 expertise-card-title">{data.title}</h4>
                 <p className="text-[25px] opacity-60">{data.content}</p>
               </div> 
             ))}
