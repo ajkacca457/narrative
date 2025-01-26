@@ -1,30 +1,7 @@
 "use client";
 import { useState } from 'react';
 
-const Accordion = () => {
-  // Accordion data
-  const accordionItems = [
-    {
-      id: 1,
-      question: 'How can digital marketing benefit my business?',
-      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
-    },
-    {
-      id: 2,
-      question: 'How can digital marketing benefit my business?',
-      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
-    },
-    {
-      id: 3,
-      question: 'What digital marketing services do you offer?',
-      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
-    },
-    {
-      id: 4,
-      question: 'How long does it take to see results',
-      answer: 'Donec rhoncus turpis massa diam nulla. Semper ut commodo integer nam pretium. Volutpat tincidunt suspendisse ac interdum. Dignissim est bibendum commodo odio phasellus. Vestibulum augue est non scelerisque ut arcu nunc. Nec aliquet lectus egestas adipiscing massa ultrices interdum imperdiet. Tristique eget quam natoque in vitae cursus et fermentum enim. Tincidunt sollicitudin at id porta praesent at condimentum lorem.'
-    }
-  ];
+const Accordion = ({accordionItems}) => {
 
   // State to track which accordion item is open
   const [openIndex, setOpenIndex] = useState(null);
