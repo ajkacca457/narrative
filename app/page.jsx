@@ -39,7 +39,12 @@ export default function Home() {
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[250px] -z-[1] radial-light opacity-40"></div>
         <Reviews />
       </div>
-      <Faq />
+
+      <div className="relative">
+        <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
+        <Faq />
+        <CircularPattern customClass="absolute -right-[50px] -bottom-[50px]" />
+      </div>
       <KeyFigure />
       <LogoSlider />
     </div>
