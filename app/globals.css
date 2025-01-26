@@ -194,6 +194,21 @@
   .brand-card-description {
     font-family: "PlusJakartaSans-Regular", sans-serif;
   }
+
+  .contact-card {
+    border: 1.5px solid #1E1E21;
+    border-radius: 20px;
+    padding: 25px;
+  }
+
+  .contact-card-title {
+    font-family: "Inter-Regular", sans-serif;
+  }
+
+  .contact-card-description {
+    font-family: "Inter-Regular", sans-serif;
+  }
+
   .square-cards-container {
     border: 1.5px solid green;
     border-radius: 2rem;
