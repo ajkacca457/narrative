@@ -2860,6 +2860,11 @@ const page = () => {
 
       <div className="relative">
         <AboutEnquery />
+        <CircularPattern
+          customClass="absolute -left-[150px] -bottom-[100px] z-10"
+          width="600px"
+          height="600px"
+        />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutEnquery = () => {
   return (
-    <div className="w-full about-enquiry h-auto py-[20vh]">
+    <div className="w-full about-enquiry h-auto py-[20vh] relative z-50">
       <div className="about-enquiry-container w-[1140px] mx-auto rounded-[2rem] relative border-2 border-white p-6">
         <div className="bg-[#1E1E21] rounded-[2rem] py-[10vh]">
           <div className="flex items-center gap-4 w-fit mx-auto">
