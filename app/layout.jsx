@@ -10,13 +10,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased bg-black`}
-      >
+      <body className={`antialiased bg-black overflow-x-hidden`}>
         <main>
           <Navbar />
           {children}
-          <Footer />
+          <div className="relative">
+            <div className="w-[800px] h-[800px] absolute -right-[150px] bottom-[-50px] -z-[1] radial-light opacity-40"></div>
+            <Footer />
+          </div>
         </main>
       </body>
     </html>
