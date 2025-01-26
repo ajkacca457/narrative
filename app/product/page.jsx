@@ -59,6 +59,9 @@ const page = () => {
       </div>
 
       <div className="relative">
+        <div className="w-[800px] h-[800px] absolute -right-[150px] top-[100px] -z-[1] radial-light opacity-40"></div>
+        <div className="w-[800px] h-[800px] absolute -left-[150px] top-[250px] -z-[1] radial-light opacity-40"></div>
+
         <BrandSquareCards />
       </div>
       <Testimonials />
