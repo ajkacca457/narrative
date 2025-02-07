@@ -24,7 +24,7 @@ const AboutHero = () => {
               cy="648"
               r="607"
               stroke="url(#paint0_linear_4162_1526)"
-              stroke-width="2"
+              strokeWidth="2"
             />
             <g filter="url(#filter0_f_4162_1526)">
               <circle
@@ -70,12 +70,12 @@ const AboutHero = () => {
             <path
               d="M1143 648C1143 914.731 921.404 1131 648 1131C374.596 1131 153 914.731 153 648C153 381.269 374.596 165 648 165C921.404 165 1143 381.269 1143 648Z"
               stroke="url(#paint6_linear_4162_1526)"
-              stroke-width="2"
+              strokeWidth="2"
             />
             <path
               d="M1005 651.5C1005 858.931 845.119 1027 648 1027C450.881 1027 291 858.931 291 651.5C291 444.069 450.881 276 648 276C845.119 276 1005 444.069 1005 651.5Z"
               stroke="url(#paint7_linear_4162_1526)"
-              stroke-width="2"
+              strokeWidth="2"
             />
             <defs>
               <filter

@@ -13,10 +13,14 @@ import KeyFigure from "./components/homepage/KeyFigure.jsx";
 import LogoSlider from "./components/homepage/LogoSlider.jsx";
 import CircularPattern from "./components/decors/CircularPattern.jsx";
 
-export default function Home() {
+async function Home() {
+  const res = await fetch('http://narrative.atwebpages.com/wp-json/wp/v2/pages?slug=home', { cache: 'no-store' });
+  const data = await res.json();
+  const {hero_heading, hero_subheading} = data?.[0]?.acf;
+
   return (
     <div className="relative overflow-hidden">
-      <Hero />
+      <Hero content={{hero_heading,hero_subheading}} />
       <ShowReel />
       <Display />
       <div className="relative">
@@ -50,3 +54,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

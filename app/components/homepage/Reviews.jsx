@@ -36,7 +36,7 @@ const Reviews = () => {
                   height="54"
                   rx="7"
                   stroke="#8898F2"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <circle cx="90" cy="28" r="10" fill="#8898F2" />
                 <path

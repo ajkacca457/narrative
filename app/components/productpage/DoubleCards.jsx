@@ -11,7 +11,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -36,7 +36,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -61,7 +61,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -86,7 +86,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -111,7 +111,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -136,7 +136,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -161,7 +161,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -186,7 +186,7 @@ const cardOne = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_4143_457)">
+        <g clipPath="url(#clip0_4143_457)">
           <path
             d="M16.5 1.375L27.7984 3.88575C28.4267 4.026 28.875 4.58288 28.875 5.22775V18.9599C28.875 21.7181 27.4959 24.2949 25.201 25.8239L16.5 31.625L7.799 25.8239C5.50275 24.2935 4.125 21.7181 4.125 18.9613V5.22775C4.125 4.58288 4.57325 4.026 5.20162 3.88575L16.5 1.375ZM22.6215 11.3053L15.8152 18.1101L11.9267 14.2216L9.9825 16.1659L15.8166 22L24.5671 13.2495L22.6215 11.3053Z"
             fill="white"
@@ -250,9 +250,9 @@ const DoubleCards = () => {
                     width="25.4"
                     height="25.4"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -287,9 +287,9 @@ const DoubleCards = () => {
                     width="25.4"
                     height="25.4"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -324,9 +324,9 @@ const DoubleCards = () => {
                     width="25.4"
                     height="25.4"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -361,9 +361,9 @@ const DoubleCards = () => {
                     width="25.4"
                     height="25.4"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -398,9 +398,9 @@ const DoubleCards = () => {
                     width="25.4"
                     height="25.4"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -435,9 +435,9 @@ const DoubleCards = () => {
                     width="25.4"
                     height="25.4"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -472,9 +472,9 @@ const DoubleCards = () => {
                     width="25.4"
                     height="25.4"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
