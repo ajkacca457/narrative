@@ -14,43 +14,86 @@ import LogoSlider from "./components/homepage/LogoSlider.jsx";
 import CircularPattern from "./components/decors/CircularPattern.jsx";
 
 async function Home() {
-  const res = await fetch('http://narrative.atwebpages.com/wp-json/wp/v2/pages?slug=home', { cache: 'no-store' });
+  const res = await fetch(
+    "http://narrative.atwebpages.com/wp-json/wp/v2/pages?slug=home",
+    { cache: "no-store" }
+  );
   const data = await res.json();
-  const {hero_heading, hero_subheading} = data?.[0]?.acf;
+  const acfContent = data?.[0]?.acf?.hero_page || []; // Default to empty array
 
   return (
     <div className="relative overflow-hidden">
-      <Hero content={{hero_heading,hero_subheading}} />
-      <ShowReel />
-      <Display />
-      <div className="relative">
-        <div className="w-[800px] h-[800px] absolute -right-[50px] -top-[250px] -z-[1] radial-light opacity-40"></div>
-        <CircularPattern
-          customClass="absolute right-[250px] top-[50px]"
-          width="189.5"
-          height="183"
-        />
-        <Expertise />
-      </div>
+      {/* HERO SECTION */}
+      {acfContent.map((block, index) => {
+        if (block.acf_fc_layout === "front_hero") {
+          return <Hero key={index} content={block} />;
+        }
+        return null;
+      })}
 
-      <div className="relative">
-        <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
-        <div className="w-[800px] h-[800px] absolute -right-[150px] top-[400px] -z-[1] radial-light opacity-40"></div>
-        <Projects />
-        <HowWeDo />
-      </div>
-      <div className="relative">
-        <div className="w-[800px] h-[800px] absolute -right-[150px] top-[250px] -z-[1] radial-light opacity-40"></div>
-        <Reviews />
-      </div>
+      {/* SHOWREEL & DISPLAY SECTION */}
+      {acfContent.some((block) =>
+        ["showreel", "display"].includes(block.acf_fc_layout)
+      ) && (
+        <>
+          <ShowReel />
+          <Display />
+        </>
+      )}
 
-      <div className="relative">
-        <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
-        <Faq />
-        <CircularPattern customClass="absolute -right-[50px] -bottom-[50px]" />
-      </div>
-      <KeyFigure />
-      <LogoSlider />
+      {/* EXPERTISE SECTION */}
+      {acfContent.some((block) => block.acf_fc_layout === "expertise") && (
+        <div className="relative">
+          <div className="w-[800px] h-[800px] absolute -right-[50px] -top-[250px] -z-[1] radial-light opacity-40"></div>
+          <CircularPattern
+            customClass="absolute right-[250px] top-[50px]"
+            width="189.5"
+            height="183"
+          />
+          {acfContent
+            .filter((block) => block.acf_fc_layout === "expertise")
+            .map((block, index) => (
+              <Expertise key={index} content={block} />
+            ))}
+        </div>
+      )}
+
+      {/* PROJECTS & HOW WE DO SECTION */}
+      {acfContent.some((block) =>
+        ["projects", "process"].includes(block.acf_fc_layout)
+      ) && (
+        <div className="relative">
+          <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
+          <div className="w-[800px] h-[800px] absolute -right-[150px] top-[400px] -z-[1] radial-light opacity-40"></div>
+          <Projects />
+          <HowWeDo />
+        </div>
+      )}
+
+      {/* REVIEWS SECTION */}
+      {acfContent.some((block) => block.acf_fc_layout === "reviews") && (
+        <div className="relative">
+          <div className="w-[800px] h-[800px] absolute -right-[150px] top-[250px] -z-[1] radial-light opacity-40"></div>
+          <Reviews />
+        </div>
+      )}
+
+      {/* FAQ SECTION */}
+      {acfContent.some((block) => block.acf_fc_layout === "faq") && (
+        <div className="relative">
+          <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
+          <Faq />
+          <CircularPattern customClass="absolute -right-[50px] -bottom-[50px]" />
+        </div>
+      )}
+
+      {/* KEY FIGURE & LOGO SLIDER */}
+      {acfContent.some((block) => block.acf_fc_layout === "key_figures") && (
+        <KeyFigure />
+      )}
+      {acfContent.some((block) => block.acf_fc_layout === "brand_logos") && (
+        <LogoSlider />
+      )}
     </div>
   );
 }

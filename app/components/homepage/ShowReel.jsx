@@ -2,7 +2,17 @@ import React from "react";
 
 const ShowReel = () => {
   return (
-    <div className="w-full h-screen show-reel rounded-[2rem] relative">
+    <div className="w-full h-screen show-reel rounded-[2rem] relative overflow-hidden">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="https://www.youtube.com/embed/axK-ieZp1vo?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=axK-ieZp1vo"
+        title="YouTube Video"
+        frameBorder="0"
+        allow="autoplay; encrypted-media; fullscreen"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+
       <div className="overlay bg-black opacity-30 w-full h-full absolute top-0 left-0 z-10"></div>
       <div className="content z-50 absolute w-full h-full flex flex-col items-center justify-center">
         <div className="content-container w-3/4 h-3/4 mx-auto flex flex-col justify-between">
@@ -21,11 +31,14 @@ const ShowReel = () => {
               <div className="flex items-start gap-x-4 text-white">
                 <img src="./Icon.png" alt="icon" className="-mt-[20px]" />
                 <div>
-                    <p className="tracking-wide text-[24px] mb-12">Drop your query!</p>
-                    <h4 className="tracking-wide text-[24px] font-semibold underline text-white">How can we Help!</h4>
+                  <p className="tracking-wide text-[24px] mb-12">
+                    Drop your query!
+                  </p>
+                  <h4 className="tracking-wide text-[24px] font-semibold underline text-white">
+                    How can we Help!
+                  </h4>
                 </div>
               </div>
-    
             </div>
           </div>
         </div>

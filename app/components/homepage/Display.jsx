@@ -13,7 +13,7 @@ const Display = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="mx-auto"
           >
-            <g opacity="0.3" clip-path="url(#clip0_2184_71)">
+            <g opacity="0.3" clipPath="url(#clip0_2184_71)">
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"

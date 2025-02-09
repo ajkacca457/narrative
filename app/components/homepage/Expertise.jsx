@@ -23,13 +23,17 @@ const expertiseData = [
   },
 ];
 
-const Expertise = () => {
+const Expertise = ({content}) => {
+
+  const { title_start = "", title_end="", cards = [] } = content || {};
+
+
   return (
     <div className="w-full expertise h-auto py-[10vh] relative overflow-hidden">
       <div className="expertise-container w-3/4 mx-auto z-50 relative">
         <div className="expertise-tite flex items-center gap-x-[5vw] mb-[5vh]">
           <h3 className="text-[50px] text-white">
-            Our <span className="text-highlight text-[75px]">Expertise</span>
+            {title_start && title_start} {title_end && <span className="text-highlight text-[75px]">{title_end}</span>}
           </h3>
           <img
             src="/arrow.png"
@@ -39,15 +43,15 @@ const Expertise = () => {
         </div>
 
         <div className="expertise-content grid grid-cols-1 md:grid-cols-3 gap-x-4 relative z-50 ">
-          {expertiseData.map((data) => (
+          {cards.length>0 && cards.map((data,index) => (
             <div
-              key={data.id}
+              key={index}
               className="expertise-card expertise-gradient text-center text-white p-[25px] rounded-[20px] relative"
             >
               <h4 className="text-[40px] uppercase mb-10 expertise-card-title">
-                {data.title}
+                {data.card_title}
               </h4>
-              <p className="text-[25px] opacity-60">{data.content}</p>
+              <p className="text-[25px] opacity-60">{data.card_content}</p>
             </div>
           ))}
         </div>
