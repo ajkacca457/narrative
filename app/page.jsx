@@ -70,7 +70,12 @@ async function Home() {
             .map((block, index) => (
               <Projects key={index} content={block} />
             ))}
-          <HowWeDo />
+
+          {acfContent
+            .filter((block) => block.acf_fc_layout === "process")
+            .map((block, index) => (
+              <HowWeDo key={index} content={block} />
+            ))}
         </div>
       )}
 
