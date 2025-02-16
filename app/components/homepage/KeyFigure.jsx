@@ -3,9 +3,6 @@ import React from 'react'
 const KeyFigure = ({content}) => {
 
 const {figure= []} = content|| {};
-
-console.log(figure);    
-
   return (
     <div className='key-figure w-full h-auto py-[10vh]'>
         

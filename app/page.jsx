@@ -101,12 +101,18 @@ async function Home() {
           {acfContent
             .filter((block) => block.acf_fc_layout === "key_figures")
             .map((block, index) => (
-              <KeyFigure key={index} content={block}/>
+              <KeyFigure key={index} content={block} />
             ))}
         </>
       )}
       {acfContent.some((block) => block.acf_fc_layout === "brand_logos") && (
-        <LogoSlider />
+        <>
+          {acfContent
+            .filter((block) => block.acf_fc_layout === "brand_logos")
+            .map((block, index) => (
+              <LogoSlider key={index} content={block} />
+            ))}
+        </>
       )}
     </div>
   );

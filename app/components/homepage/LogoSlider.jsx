@@ -3,42 +3,10 @@
 import React from 'react'
 import Slider from "react-slick";
 
+const LogoSlider = ({content}) => {
 
+    const {logos= []} = content|| {};   
 
-const logoData = [
-
-    {
-        id:1,
-        imgSrc:"/logoslider/company-1.png",
-    },
-
-    {
-        id:2,
-        imgSrc:"/logoslider/company-2.png",
-    },
-
-    {
-        id:3,
-        imgSrc:"/logoslider/company-3.png",
-    },
-    {
-        id:4,
-        imgSrc:"/logoslider/company-1.png",
-    },
-
-    {
-        id:5,
-        imgSrc:"/logoslider/company-2.png",
-    },
-
-    {
-        id:6,
-        imgSrc:"/logoslider/company-3.png",
-    },
-
-];
-
-const LogoSlider = () => {
     const settings = {
         dots: true,
         infinite: true,
@@ -48,9 +16,9 @@ const LogoSlider = () => {
       };
   return (
     <Slider {...settings} className="w-3/4 mx-auto my-[10vh]">
-        {logoData.map((data) => (
+        {logos.length>0 && logos.map((data) => (
             <div key={data.id} className="logo-card">
-                <img src={data.imgSrc} alt="logo" />
+                <img src={data?.logo?.sizes?.large} alt="logo" />
             </div>
         ))}
     </Slider>
