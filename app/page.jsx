@@ -97,7 +97,13 @@ async function Home() {
 
       {/* KEY FIGURE & LOGO SLIDER */}
       {acfContent.some((block) => block.acf_fc_layout === "key_figures") && (
-        <KeyFigure />
+        <>
+          {acfContent
+            .filter((block) => block.acf_fc_layout === "key_figures")
+            .map((block, index) => (
+              <KeyFigure key={index} content={block}/>
+            ))}
+        </>
       )}
       {acfContent.some((block) => block.acf_fc_layout === "brand_logos") && (
         <LogoSlider />
