@@ -5,12 +5,26 @@ import ContactForm from "../components/contactpage/ContactForm";
 import ContactFaq from "../components/contactpage/ContactFaq";
 import CircularPattern from "../components/decors/CircularPattern";
 
-const page = () => {
+const page = async() => {
+
+  const res = await fetch(
+    "https://narrative-rest-7d1f3a.ingress-bonde.ewp.live/wp-json/wp/v2/pages?slug=contact&acf_format=standard",
+    { cache: "no-store" }
+  );
+  const data = await res.json();
+  const acfContent = data?.[0]?.acf?.contact_page || []; 
+
   return (
     <div>
       <div className="relative">
         <CircularPattern customClass="absolute top-[200px] left-[200px]" />
-        <ContactHero />
+
+        {acfContent.map((block, index) => {
+        if (block.acf_fc_layout === "contact_hero") {
+          return <ContactHero key={index} content={block} />;
+        }
+      })}
+        
         <ContactInfo />
       </div>
 

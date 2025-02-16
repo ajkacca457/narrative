@@ -1,6 +1,9 @@
 import React from "react";
 
-const ContactHero = () => {
+const ContactHero = ({content}) => {
+
+  const {contact_hero_heading="Contact Us"} = content;
+
   return (
     <div className="w-full reviews h-auto py-[20vh] relative">
       <img
@@ -15,8 +18,8 @@ const ContactHero = () => {
       />
 
       <div className="product-hero-container w-3/4 mx-auto relative z-50">
-        <h1 className="text-white text-center text-[96px] font-extrabold">
-          CONTACT US
+        <h1 className="text-white text-center text-[96px] font-extrabold uppercase">
+          {contact_hero_heading}
         </h1>
       </div>
     </div>
