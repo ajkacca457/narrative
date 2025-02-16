@@ -14,7 +14,6 @@ const page = () => {
       <AboutHero />
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
-        <AboutExpertise />
       </div>
 
       <div className="relative">
