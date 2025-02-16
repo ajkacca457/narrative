@@ -15,7 +15,7 @@ import CircularPattern from "./components/decors/CircularPattern.jsx";
 
 async function Home() {
   const res = await fetch(
-    "http://narrative.atwebpages.com/wp-json/wp/v2/pages?slug=home",
+    "https://narrative-rest-7d1f3a.ingress-bonde.ewp.live/wp-json/wp/v2/pages?slug=home&acf_format=standard",
     { cache: "no-store" }
   );
   const data = await res.json();
@@ -65,7 +65,11 @@ async function Home() {
         <div className="relative">
           <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
           <div className="w-[800px] h-[800px] absolute -right-[150px] top-[400px] -z-[1] radial-light opacity-40"></div>
-          <Projects />
+          {acfContent
+            .filter((block) => block.acf_fc_layout === "projects")
+            .map((block, index) => (
+              <Projects key={index} content={block} />
+            ))}
           <HowWeDo />
         </div>
       )}

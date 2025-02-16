@@ -1,27 +1,4 @@
 import React from "react";
-import BlurredCircle from "../decors/BlurredCircle";
-
-const expertiseData = [
-  {
-    id: 1,
-    title: "Crafting Stories",
-    content:
-      "We capture your brand’s unique voice and message, creating visuals and content that resonate and leave a lasting impression.",
-  },
-  {
-    id: 2,
-    title: "Building Presence",
-    content:
-      "With strategic social media marketing and polished video editing, we position your brand exactly where it needs to be to reach your audience.",
-  },
-
-  {
-    id: 3,
-    title: "DRIVING RESULTS",
-    content:
-      "From boosting engagement to generating leads, we focus on meaningful outcomes that strengthen your brand and foster real, measurable growth.",
-  },
-];
 
 const Expertise = ({content}) => {
 
