@@ -24,8 +24,13 @@ const page = async() => {
           return <ContactHero key={index} content={block} />;
         }
       })}
+
+      {acfContent.map((block, index) => {
+        if (block.acf_fc_layout === "contact_cards") {
+          return <ContactInfo key={index} content={block} />;
+        }
+      })}
         
-        <ContactInfo />
       </div>
 
       <div className="relative">
