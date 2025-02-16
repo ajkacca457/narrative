@@ -86,7 +86,11 @@ async function Home() {
       {acfContent.some((block) => block.acf_fc_layout === "faq") && (
         <div className="relative">
           <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
-          <Faq />
+          {acfContent
+            .filter((block) => block.acf_fc_layout === "faq")
+            .map((block, index) => (
+              <Faq key={index} content={block} />
+            ))}
           <CircularPattern customClass="absolute -right-[50px] -bottom-[50px]" />
         </div>
       )}

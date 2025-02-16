@@ -2,39 +2,9 @@
 import React from "react";
 import Slider from "react-slick";
 
-const projectData= [
-
-
-    {
-        id:1,
-        imgSrc:"/slider/slide1.png",
-        tags: ["Branding", "Photography"],
-        title:"CLASSIC CONCRETE PLANTERS",
-        icon:"/preloader.png"
-    },
-
-    {
-        id:2,
-        imgSrc:"/slider/slide2.png",
-        tags: ["Branding", "Photography"],
-        title:"CLASSIC CONCRETE PLANTERS",
-        icon:"/preloader.png"
-    },
-
-    {
-        id:3,
-        imgSrc:"/slider/slide3.png",
-        tags: ["Branding", "Photography"],
-        title:"CLASSIC CONCRETE PLANTERS",
-        icon:"/preloader.png"
-    },
-]
-
-
-
 const Projects = ({content}) => {
 
-    const {project} = content;
+    const {project= []} = content|| {};
 
     const settings = {
         dots: true,
