@@ -10,14 +10,37 @@ import Testimonials from "../components/productpage/Testimonials";
 import DoubleCards from "../components/productpage/DoubleCards";
 import CircularPattern from "../components/decors/CircularPattern";
 
-const page = () => {
+const page = async () => {
+  const res = await fetch(
+    "https://narrative-rest-7d1f3a.ingress-bonde.ewp.live/wp-json/wp/v2/pages?slug=product&acf_format=standard",
+    { cache: "no-store" }
+  );
+  const data = await res.json();
+  const acfContent = data?.[0]?.acf?.product_page || [];
+
   return (
     <div className="product-page">
-      <ProductHero />
+      {acfContent.map((block, index) => {
+        if (block.acf_fc_layout === "product_hero") {
+          return <ProductHero key={index} content={block} />;
+        }
+      })}
+
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -right-[150px] bottom-[500px] -z-[1] radial-light opacity-40"></div>
-        <VideoEmbed />
-        <Input />
+
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "product_video") {
+            return <VideoEmbed key={index} content={block} />;
+          }
+        })}
+
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "input_data") {
+            return <Input key={index} content={block} />;
+          }
+        })}
+
         <CircularPattern customClass="absolute right-[50px] bottom-[50px]" />
       </div>
 

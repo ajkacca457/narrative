@@ -1,7 +1,9 @@
 import React from "react";
-import ProductHeroImage from "../../../public/product/product-hero.png";
 
-const ProductHero = () => {
+const ProductHero = ({content}) => {
+
+  const {heading=""}= content || {};
+
   return (
     <div className="w-full reviews h-auto py-[10vh] relative">
       <img src="/product/Line_BG.png" alt="product-grid" className="absolute h-full w-[600px] right-[100px] top-0 z-20 opacity-60" />
@@ -9,7 +11,7 @@ const ProductHero = () => {
         <div className="grid grid-cols-4 place-items-center">
             <div className="col-span-3">
           <h1 className="text-white text-[96px] max-w-[17ch]">
-            Power your social media growth in hours, not weeks
+            {heading}
           </h1>
           </div>
 
