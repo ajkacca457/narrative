@@ -141,8 +141,7 @@ const page = async () => {
             return <BrandSquareCards key={index} content={block} />;
           }
         })}
-      </div>
-
+      </div>    
       <div className="relative">
         <div className="absolute -top-[200px] left-1/2 transform -translate-x-1/2 z-20 opacity-50">
           <svg
@@ -587,7 +586,12 @@ const page = async () => {
             </defs>
           </svg>
         </div>
-        <Testimonials />
+
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "testimonials") {
+            return <Testimonials key={index} content={block} />;
+          }
+        })}
       </div>
 
       <div className="relative">
@@ -1035,7 +1039,12 @@ const page = async () => {
           </svg>
         </div>
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[50px] -z-[1] radial-light opacity-40"></div>
-        <DoubleCards />
+
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "packages") {
+            return <DoubleCards key={index} content={block} />;
+          }
+        })}
       </div>
     </div>
   );
