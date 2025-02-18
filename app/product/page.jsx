@@ -73,7 +73,11 @@ const page = async () => {
             mask="url(#path-1-outside-1_4123_556)"
           />
         </svg>
-        <BrandCards />
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "brand_cards") {
+            return <BrandCards key={index} content={block} />;
+          }
+        })}
         <CircularPattern
           customClass="absolute -left-[150px] top-[400px]"
           width="600px"
