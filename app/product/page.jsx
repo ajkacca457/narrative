@@ -136,7 +136,11 @@ const page = async () => {
           </svg>
         </div>
 
-        <BrandSquareCards />
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "work_cards") {
+            return <BrandSquareCards key={index} content={block} />;
+          }
+        })}
       </div>
 
       <div className="relative">
