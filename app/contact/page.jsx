@@ -5,14 +5,13 @@ import ContactForm from "../components/contactpage/ContactForm";
 import ContactFaq from "../components/contactpage/ContactFaq";
 import CircularPattern from "../components/decors/CircularPattern";
 
-const page = async() => {
-
+const page = async () => {
   const res = await fetch(
     "https://narrative-rest-7d1f3a.ingress-bonde.ewp.live/wp-json/wp/v2/pages?slug=contact&acf_format=standard",
     { cache: "no-store" }
   );
   const data = await res.json();
-  const acfContent = data?.[0]?.acf?.contact_page || []; 
+  const acfContent = data?.[0]?.acf?.contact_page || [];
 
   return (
     <div>
@@ -20,27 +19,26 @@ const page = async() => {
         <CircularPattern customClass="absolute top-[200px] left-[200px]" />
 
         {acfContent.map((block, index) => {
-        if (block.acf_fc_layout === "contact_hero") {
-          return <ContactHero key={index} content={block} />;
-        }
-      })}
+          if (block.acf_fc_layout === "contact_hero") {
+            return <ContactHero key={index} content={block} />;
+          }
+        })}
 
-      {acfContent.map((block, index) => {
-        if (block.acf_fc_layout === "contact_cards") {
-          return <ContactInfo key={index} content={block} />;
-        }
-      })}
-        
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "contact_cards") {
+            return <ContactInfo key={index} content={block} />;
+          }
+        })}
       </div>
 
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[50px] -z-[1] radial-light opacity-40"></div>
 
         {acfContent.map((block, index) => {
-        if (block.acf_fc_layout === "form_data") {
-          return <ContactForm key={index} content={block} />;
-        }
-      })}
+          if (block.acf_fc_layout === "form_data") {
+            return <ContactForm key={index} content={block} />;
+          }
+        })}
         <CircularPattern customClass="absolute -bottom-[200px] -right-[50px]" />
       </div>
 
@@ -51,7 +49,12 @@ const page = async() => {
           width="189.5"
           height="183"
         />
-        <ContactFaq />
+
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "faq") {
+            return <ContactFaq key={index} content={block} />;
+          }
+        })}
       </div>
     </div>
   );
