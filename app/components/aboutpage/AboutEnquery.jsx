@@ -1,6 +1,9 @@
 import React from "react";
 
-const AboutEnquery = () => {
+const AboutEnquery = ({content}) => {
+
+  const {top_heading="",heading="", subheading="", button_text=""} = content||{};
+
   return (
     <div className="w-full about-enquiry h-auto py-[20vh] relative z-50">
       <div className="about-enquiry-container w-[1140px] mx-auto rounded-[2rem] relative border-2 border-white p-6">
@@ -15,7 +18,7 @@ const AboutEnquery = () => {
             >
               <rect x="0.5" width="20" height="6" rx="3" fill="#00FFFF" />
             </svg>
-            <p className="text-white text-[16px]">Available For New Project</p>
+            <p className="text-white text-[16px]">{top_heading}</p>
             <svg
               width="21"
               height="6"
@@ -28,17 +31,15 @@ const AboutEnquery = () => {
           </div>
 
           <h1 className="text-white text-[64px] font-bold text-center max-w-[15ch] mx-auto">
-            Interested in Working Together?
+            {heading}
           </h1>
           <p className="text-[#929292] max-w-[60ch] text-center mx-auto">
-            Orci at id enim eu pellentesque habitant. Ut at diam suscipit amet
-            id cursus id blandit. Consectetur maecenas id vivamus integer
-            integer aliquam.
+            {subheading}
           </p>
 
           <div className="flex justify-center mt-10">
             <button className="uppercase bg-[#00FFFF] px-4 py-2 rounded-full w-fit mx-auto">
-              Schedule a Call
+              {button_text}
             </button>
           </div>
         </div>

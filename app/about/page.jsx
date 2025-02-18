@@ -2879,7 +2879,11 @@ const page = async () => {
       </div>
 
       <div className="relative">
-        <AboutEnquery />
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "display") {
+            return <AboutEnquery key={index} content={block} />;
+          }
+        })}
         <CircularPattern
           customClass="absolute -left-[150px] -bottom-[100px] z-10"
           width="600px"
