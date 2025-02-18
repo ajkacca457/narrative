@@ -8,10 +8,22 @@ import AboutOurTeam from "../components/aboutpage/AboutOurTeam";
 import AboutEnquery from "../components/aboutpage/AboutEnquery";
 import CircularPattern from "../components/decors/CircularPattern";
 
-const page = () => {
+const page = async () => {
+  const res = await fetch(
+    "https://narrative-rest-7d1f3a.ingress-bonde.ewp.live/wp-json/wp/v2/pages?slug=about&acf_format=standard",
+    { cache: "no-store" }
+  );
+  const data = await res.json();
+  const acfContent = data?.[0]?.acf?.about_page || [];
+
   return (
     <div>
-      <AboutHero />
+      {acfContent.map((block, index) => {
+        if (block.acf_fc_layout === "about_hero") {
+          return <AboutHero key={index} content={block} />;
+        }
+      })}
+
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
       </div>
@@ -2838,7 +2850,13 @@ const page = () => {
             />
           </svg>
         </div>
-        <AboutTestimonial />
+
+        {acfContent.map((block, index) => {
+        if (block.acf_fc_layout === "testimonials") {
+          return <AboutTestimonial key={index} content={block} />;
+        }
+      })}
+
       </div>
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -left-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>

@@ -1,6 +1,9 @@
 import React from "react";
 
-const AboutHero = () => {
+const AboutHero = ({content}) => {
+
+  const {heading=""}= content || {};
+
   return (
     <div className="w-full reviews h-auto py-[10vh] relative">
       <div
@@ -13,8 +16,8 @@ const AboutHero = () => {
       <div className="product-hero-container w-3/4 mx-auto relative">
         <div className="absolute -top-[35px] left-1/2 transform -translate-x-1/2 -z-[3]">
           <svg
-            width="1296"
-            height="1296"
+            width="1050"
+            height="1050"
             viewBox="0 0 1296 1296"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -274,11 +277,9 @@ const AboutHero = () => {
             </defs>
           </svg>
         </div>
-        <img
-          src="/about/about-hero.png"
-          alt="about-hero"
-          className="mx-auto relative z-50"
-        />
+        <div className="text-center h-screen flex flex-col justify-center items-center">
+          <h1 className="text-white text-[96px] uppercase font-bold about-title">{heading}</h1>  
+        </div>
       </div>
     </div>
   );

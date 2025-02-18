@@ -31,7 +31,10 @@ const aboutTestimonialData = [
 
 
 
-const AboutTestimonial = () => {
+const AboutTestimonial = ({content}) => {
+
+  const {top_heading="",heading="", cards=[]} = content||{};
+
 
     const settings = {
         dots: true,
@@ -76,20 +79,20 @@ const AboutTestimonial = () => {
               </linearGradient>
             </defs>
           </svg>
-          <span>narratives</span>
+          <span>{top_heading}</span>
         </button>
         <h1 className="bg-double-gradient bg-clip-text text-transparent about-testimonial-title text-center text-[60px] max-w-[15ch] mx-auto">
-          Don’t Trust Us, Trust Their Voice
+          {heading}
         </h1>
 
         <Slider {...settings} className="mt-10">
-          {aboutTestimonialData.map((data) => (
-            <div key={data.id} className="about-testimonial-card px-4">
+          {cards.length>0 && cards.map((data,index) => (
+            <div key={index} className="about-testimonial-card px-4">
               <div className="about-testimonial-card-content bg-about-testimonial-gradient mt-10 rounded-[1rem] p-8">
                 <h3 className="text-white text-[40px] font-semibold">{data.title}</h3>
                 <p className="text-white text-[18px] text-center my-5">{data.content}</p>
                 <div className="seperator w-1/5 mx-auto h-[2px] bg-white my-8"></div>
-                <h4 className="text-white text-[30px]">{data.reviewer}</h4>
+                <h4 className="text-white text-[30px]">{data.name}</h4>
               </div>
             </div>
           ))}
