@@ -2852,11 +2852,10 @@ const page = async () => {
         </div>
 
         {acfContent.map((block, index) => {
-        if (block.acf_fc_layout === "testimonials") {
-          return <AboutTestimonial key={index} content={block} />;
-        }
-      })}
-
+          if (block.acf_fc_layout === "testimonials") {
+            return <AboutTestimonial key={index} content={block} />;
+          }
+        })}
       </div>
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -left-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
@@ -2872,7 +2871,11 @@ const page = async () => {
           width="600px"
           height="600px"
         />
-        <AboutOurTeam />
+        {acfContent.map((block, index) => {
+          if (block.acf_fc_layout === "our_team") {
+            return <AboutOurTeam key={index} content={block} />;
+          }
+        })}
       </div>
 
       <div className="relative">
