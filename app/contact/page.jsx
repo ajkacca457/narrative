@@ -35,7 +35,12 @@ const page = async() => {
 
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[50px] -z-[1] radial-light opacity-40"></div>
-        <ContactForm />
+
+        {acfContent.map((block, index) => {
+        if (block.acf_fc_layout === "form_data") {
+          return <ContactForm key={index} content={block} />;
+        }
+      })}
         <CircularPattern customClass="absolute -bottom-[200px] -right-[50px]" />
       </div>
 
