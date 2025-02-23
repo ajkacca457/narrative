@@ -286,6 +286,34 @@
     filter: blur(60px);  /* Radial blur effect */
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
   }
+
+
+  @keyframes scrollInfinite {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .scrollable-image-container {
+    display: flex;
+    width: 200%; 
+    animation: scrollInfinite 30s linear infinite;
+  }
+  
+  .scrollable-logo {
+    height: auto;
+    width: auto;
+    max-width: 100%; 
+    flex-shrink: 0;
+  }
+  
+
 }
 
 @layer utilities {
