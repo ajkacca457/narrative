@@ -1,27 +1,5 @@
 import React from "react";
 
-const howwedoData = [
-  {
-    id: 1,
-    title: "Ideate",
-    content:
-      "We capture your brand’s unique voice and message, creating visuals and content that resonate and leave a lasting impression.",
-  },
-  {
-    id: 2,
-    title: "CREATE",
-    content:
-      "With strategic social media marketing and polished video editing, we position your brand exactly where it needs to be to reach your audience.",
-  },
-
-  {
-    id: 3,
-    title: "ITERATE",
-    content:
-      "From boosting engagement to generating leads, we focus on meaningful outcomes that strengthen your brand and foster real, measurable growth.",
-  },
-];
-
 const HowWeDo = ({content}) => {
 
   const {title_thin="How", title_strong="we do it", cards=[]}= content||{};
@@ -46,7 +24,7 @@ const HowWeDo = ({content}) => {
                 className="text-[60px] uppercase tracking-[0.3em]"
                 style={{
                   writingMode: "vertical-lr",
-                  transform: "rotate(180deg)", // Flip it to go bottom-to-top
+                  transform: "rotate(180deg)",
                 }}
               >
                 {data.card_title}
