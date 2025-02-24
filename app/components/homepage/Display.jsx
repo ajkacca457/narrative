@@ -85,10 +85,10 @@ const Display = () => {
         </svg>
 
         {/* Animated Headings */}
-        <h3 ref={h3Ref} className="text-[64px] text-white opacity-0">
+        <h3 ref={h3Ref} className="text-display-subheading text-white opacity-0">
           WE CREATE
         </h3>
-        <h2 ref={h2Ref} className="text-[96px] text-white uppercase opacity-0">
+        <h2 ref={h2Ref} className="text-display-heading text-white uppercase opacity-0">
           Videos/Brands/Narrative
         </h2>
       </div>

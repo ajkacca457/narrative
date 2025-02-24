@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'hero-front': 'clamp(1.875rem, 0.4471rem + 6.3462vw, 6rem)', 
+        'display-subheading': 'clamp(0.9375rem, -0.1226rem + 4.7115vw, 4rem)',
+        'display-heading': 'clamp(1.5rem, -0.0577rem + 6.9231vw, 6rem)',
+      },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',
         'double-gradient': `linear-gradient(0deg, #FFFFFF, #FFFFFF),linear-gradient(180deg, #FFFFFF 0%, #070322 139.86%)`,

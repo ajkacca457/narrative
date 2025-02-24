@@ -62,7 +62,7 @@ const Hero = ({ content }) => {
   }, []);
 
   return (
-    <div className="w-full h-screen relative flex flex-col items-center justify-center">
+    <div className="w-full h-[50vh] sm:h-screen relative flex flex-col items-center justify-center">
       {/* SVG Decoration with Draw Effect */}
       <svg
         width="194"
@@ -91,13 +91,13 @@ const Hero = ({ content }) => {
       <div className="max-w-[1100px] text-center">
         <h1
           ref={headingRef}
-          className="text-[96px] text-white font-semibold opacity-0"
+          className="text-hero-front text-white font-semibold opacity-0"
         >
           {hero_heading}
         </h1>
         <h5
           ref={subheadingRef}
-          className="text-[20px] ml-[100px] tracking-[.3em] text-white mt-6 uppercase opacity-0"
+          className="text-[20px] ml-[100px] tracking-[.3em] text-white mt-6 uppercase opacity-0 hidden sm:block"
         >
           {hero_subheading}
         </h5>
