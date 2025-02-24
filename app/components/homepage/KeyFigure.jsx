@@ -37,7 +37,7 @@ const KeyFigure = ({ content }) => {
 
   return (
     <div className="key-figure w-full h-auto py-[10vh]">
-      <div className="key-figure-container w-3/4 mx-auto grid grid-cols-4 gap-x-6">
+      <div className="key-figure-container w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-6">
         {figure.length > 0 &&
           figure.map((data, index) => (
             <div
@@ -47,11 +47,11 @@ const KeyFigure = ({ content }) => {
               <h4
                 ref={(el) => (numberRefs.current[index] = el)}
                 data-value={data.number}
-                className="text-[120px] uppercase"
+                className="text-key-figure-number uppercase"
               >
                 0
               </h4>
-              <p className="text-[18px] opacity-60">{data.title}</p>
+              <p className="text-key-figure-content opacity-60">{data.title}</p>
             </div>
           ))}
       </div>

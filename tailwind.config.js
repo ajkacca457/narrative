@@ -20,6 +20,8 @@ module.exports = {
         'faq-title': 'clamp(3rem, 1.9615rem + 4.6154vw, 6rem)', // 96px - 48px
         'accordion-heading': 'clamp(0.75rem, 0.4038rem + 1.5385vw, 1.75rem)', // 28px - 12px
         'accordion-content': 'clamp(0.75rem, 0.7067rem + 0.1923vw, 0.875rem)', // 14px - 12px
+        'key-figure-number': 'clamp(5.625rem, 4.976rem + 2.8846vw, 7.5rem)', // 120px - 90px
+        'key-figure-content': 'clamp(0.875rem, 0.7885rem + 0.3846vw, 1.125rem)', // 18px - 14px
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',
