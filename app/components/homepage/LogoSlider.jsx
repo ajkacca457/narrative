@@ -6,14 +6,28 @@ import Slider from "react-slick";
 const LogoSlider = ({content}) => {
 
     const {logos= []} = content|| {};   
-
-    const settings = {
+      const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 1
+        slidesToShow: 5, 
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024, 
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+        ],
       };
+
   return (
     <Slider {...settings} className="w-3/4 mx-auto my-[10vh]">
         {logos.length>0 && logos.map((data) => (
