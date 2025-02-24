@@ -16,7 +16,10 @@ module.exports = {
         'expertise-card-heading': 'clamp(1.5rem, 1.1538rem + 1.5385vw, 2.5rem)', // 40px - 24px 
         'expertise-card-description': 'clamp(1rem, 0.8053rem + 0.8654vw, 1.5625rem)', // 25px - 16px
         'we-do-card-heading': 'clamp(2.25rem, 1.7308rem + 2.3077vw, 3.75rem)', // 60px - 36px
-        'we-do-card-text':'clamp(1.125rem, 0.9736rem + 0.6731vw, 1.5625rem)' // 25px - 18px
+        'we-do-card-text':'clamp(1.125rem, 0.9736rem + 0.6731vw, 1.5625rem)', // 25px - 18px
+        'faq-title': 'clamp(3rem, 1.9615rem + 4.6154vw, 6rem)', // 96px - 48px
+        'accordion-heading': 'clamp(0.75rem, 0.4038rem + 1.5385vw, 1.75rem)', // 28px - 12px
+        'accordion-content': 'clamp(0.75rem, 0.7067rem + 0.1923vw, 0.875rem)', // 14px - 12px
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',

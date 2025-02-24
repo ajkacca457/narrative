@@ -43,11 +43,11 @@ const Accordion = ({ accordionItems }) => {
   );
 
   return (
-    <div ref={accordionRef} className="accordion w-full col-span-2 opacity-0">
+    <div ref={accordionRef} className="accordion w-full col-span-2 opacity-0 relative z-[100]">
       {accordionItems.map(({ id, title, content }) => (
         <div key={id} className="border border-[#1E1E21] px-10 py-4 my-2 rounded-[60px]">
           <button onClick={() => toggleAccordion(id)} className="w-full flex justify-between items-center py-5 text-white">
-            <span className="text-[28px]">{title}</span>
+            <span className="text-accordion-heading">{title}</span>
             <span className="text-black bg-white p-4 rounded-full transition-transform duration-300">
               {openIndex === id ? minusSVG : plusSVG}
             </span>
@@ -58,7 +58,7 @@ const Accordion = ({ accordionItems }) => {
             }}
             className="overflow-hidden transition-all duration-300 ease-in-out"
           >
-            <div className="pb-5 text-sm text-[#929292] text-[16px]">{content}</div>
+            <div className="pb-5 text-sm text-[#929292] text-accordion-content">{content}</div>
           </div>
         </div>
       ))}
