@@ -22,20 +22,17 @@ const AboutOurTeam = ({ content }) => {
       },
     });
 
-    // Animate title
     tl.fromTo(
       titleRef.current,
       { opacity: 0, y: -30 },
       { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
     )
-      // Animate subtitle
       .fromTo(
         subtitleRef.current,
         { opacity: 0, y: -30 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
-        "-=0.5" // Overlap with title animation
+        "-=0.5" 
       )
-      // Animate cards
       .fromTo(
         cardsRef.current,
         { opacity: 0, y: 30 },
@@ -46,7 +43,7 @@ const AboutOurTeam = ({ content }) => {
           ease: "power2.out",
           stagger: 0.2,
         },
-        "-=0.5" // Overlap with subtitle animation
+        "-=0.5" 
       );
   }, []);
 
@@ -67,7 +64,7 @@ const AboutOurTeam = ({ content }) => {
               <div
                 key={index}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className="p-4 border-[1px] border-[#2D2D2D] rounded-[1rem] opacity-0" // Set initial opacity to 0
+                className="p-4 border-[1px] border-[#2D2D2D] rounded-[1rem] opacity-0" 
               >
                 <div className="w-full h-[420px] overflow-hidden rounded-[1rem]">
                   <img

@@ -1,11 +1,55 @@
-import React from "react";
+"use client";
 
-const AboutEnquery = ({content}) => {
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  const {top_heading="",heading="", subheading="", button_text=""} = content||{};
+gsap.registerPlugin(ScrollTrigger);
+
+const AboutEnquery = ({ content }) => {
+  const { top_heading = "", heading = "", subheading = "", button_text = "" } = content || {};
+  const sectionRef = useRef(null);
+  const topHeadingRef = useRef(null);
+  const mainHeadingRef = useRef(null);
+  const subheadingRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%", 
+        toggleActions: "play none none reset",
+      },
+    });
+
+    tl.fromTo(
+      topHeadingRef.current,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
+    )
+      .fromTo(
+        mainHeadingRef.current,
+        { opacity: 0, y: -30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        "-=0.3" 
+      )
+      .fromTo(
+        subheadingRef.current,
+        { opacity: 0, y: -30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        "-=0.3" 
+      )
+      .fromTo(
+        buttonRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        "-=0.3" 
+      );
+  }, []);
 
   return (
-    <div className="w-full about-enquiry h-auto py-[20vh] relative z-50">
+    <div ref={sectionRef} className="w-full about-enquiry h-auto py-[20vh] relative z-50">
       <div className="about-enquiry-container w-[1140px] mx-auto rounded-[2rem] relative border-2 border-white p-6">
         <div className="bg-[#1E1E21] rounded-[2rem] py-[10vh]">
           <div className="flex items-center gap-4 w-fit mx-auto">
@@ -18,7 +62,9 @@ const AboutEnquery = ({content}) => {
             >
               <rect x="0.5" width="20" height="6" rx="3" fill="#00FFFF" />
             </svg>
-            <p className="text-white text-[16px]">{top_heading}</p>
+            <p ref={topHeadingRef} className="text-white text-[16px]">
+              {top_heading}
+            </p>
             <svg
               width="21"
               height="6"
@@ -30,15 +76,15 @@ const AboutEnquery = ({content}) => {
             </svg>
           </div>
 
-          <h1 className="text-white text-[64px] font-bold text-center max-w-[15ch] mx-auto">
+          <h1 ref={mainHeadingRef} className="text-white text-[64px] font-bold text-center max-w-[15ch] mx-auto">
             {heading}
           </h1>
-          <p className="text-[#929292] max-w-[60ch] text-center mx-auto">
+          <p ref={subheadingRef} className="text-[#929292] max-w-[60ch] text-center mx-auto">
             {subheading}
           </p>
 
           <div className="flex justify-center mt-10">
-            <button className="uppercase bg-[#00FFFF] px-4 py-2 rounded-full w-fit mx-auto">
+            <button ref={buttonRef} className="uppercase bg-[#00FFFF] px-4 py-2 rounded-full w-fit mx-auto">
               {button_text}
             </button>
           </div>

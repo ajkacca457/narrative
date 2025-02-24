@@ -1,8 +1,25 @@
-import React from "react";
+"use client";
 
-const ContactHero = ({content}) => {
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
-  const {contact_hero_heading="Contact Us"} = content;
+const ContactHero = ({ content }) => {
+  const { contact_hero_heading = "Contact Us" } = content;
+  const headingRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      headingRef.current,
+      { y: -50, opacity: 0 }, 
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "bounce.out",
+        delay: 0.2, 
+      }
+    );
+  }, []);
 
   return (
     <div className="w-full reviews h-auto py-[20vh] relative">
@@ -18,7 +35,10 @@ const ContactHero = ({content}) => {
       />
 
       <div className="product-hero-container w-3/4 mx-auto relative z-50">
-        <h1 className="text-white text-center text-[96px] font-extrabold uppercase">
+        <h1
+          ref={headingRef} 
+          className="text-white text-center text-[96px] font-extrabold uppercase"
+        >
           {contact_hero_heading}
         </h1>
       </div>
