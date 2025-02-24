@@ -47,12 +47,12 @@ const Reviews = () => {
     <div className="w-full reviews h-auto py-[10vh]">
       <div className="reviews-container w-3/5 mx-auto">
         <div className="reviews-title flex items-center gap-x-[5vw] mb-[5vh]">
-          <h3 ref={titleRef} className="text-highlight text-[75px] text-white uppercase">
+          <h3 ref={titleRef} className="text-highlight text-expertise-heading-highlight text-white uppercase">
             Reviews
           </h3>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div ref={column1Ref} className="col-span-1 opacity-0">
             <img
               src="/reviews/person.png"

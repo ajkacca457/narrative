@@ -50,13 +50,13 @@ const HowWeDo = ({ content }) => {
     <div ref={sectionRef} className="w-full how-we-do h-auto py-[10vh]">
       <div className="how-we-do-container w-3/4 mx-auto">
         <div className="how-we-do-title mb-[5vh] ml-[10vw]">
-          <h3 className="text-[75px] text-white uppercase">
+          <h3 className="text-expertise-heading-highlight text-white uppercase">
             <span ref={titleThinRef} className="opacity-60">{title_thin}</span>{" "}
-            <span ref={titleStrongRef} className="text-highlight text-[75px]">{title_strong}</span>
+            <span ref={titleStrongRef} className="text-highlight text-expertise-heading-highlight">{title_strong}</span>
           </h3>
         </div>
 
-        <div className="how-we-do-content grid grid-cols-1 md:grid-cols-3 gap-x-4">
+        <div className="how-we-do-content grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {cards.length > 0 && cards.map((data, index) => (
             <div
               key={index}
@@ -64,7 +64,7 @@ const HowWeDo = ({ content }) => {
               className="how-we-do-card how-we-do-gradient flex items-start gap-x-6 text-white px-[25px] rounded-[20px] opacity-0" // Initially hidden
             >
               <h4
-                className="text-[60px] uppercase tracking-[0.3em]"
+                className="text-we-do-card-heading uppercase tracking-[0.3em]"
                 style={{
                   writingMode: "vertical-lr",
                   transform: "rotate(180deg)",
@@ -72,7 +72,7 @@ const HowWeDo = ({ content }) => {
               >
                 {data.card_title}
               </h4>
-              <p className="text-[25px] opacity-60">{data.card_content}</p>
+              <p className="text-we-do-card-text opacity-60">{data.card_content}</p>
             </div>
           ))}
         </div>
