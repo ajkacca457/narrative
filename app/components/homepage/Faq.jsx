@@ -52,7 +52,7 @@ const Faq = ({ content }) => {
         >
           {title}
         </h1>
-        <p ref={subtitleRef} className="text-white text-center text-[16px] opacity-0 opacity-60 mb-10">
+        <p ref={subtitleRef} className="text-white text-center text-[16px] mb-10">
           {subtitle}
         </p>
         <div>
