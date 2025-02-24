@@ -8,9 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        'hero-front': 'clamp(1.875rem, 0.4471rem + 6.3462vw, 6rem)', 
-        'display-subheading': 'clamp(0.9375rem, -0.1226rem + 4.7115vw, 4rem)',
-        'display-heading': 'clamp(1.5rem, -0.0577rem + 6.9231vw, 6rem)',
+        'hero-front': 'clamp(1.875rem, 0.4471rem + 6.3462vw, 6rem)', //96px - 30px
+        'display-subheading': 'clamp(0.9375rem, -0.1226rem + 4.7115vw, 4rem)', //64px - 15px
+        'display-heading': 'clamp(1.5rem, -0.0577rem + 6.9231vw, 6rem)', // 96px - 24px
+        'expertise-heading-narrow': 'clamp(1.5rem, 0.9375rem + 2.5vw, 3.125rem)', // 50px - 24px
+        'expertise-heading-highlight':'clamp(2.25rem, 1.4063rem + 3.75vw, 4.6875rem)', // 75px - 36px
+        'expertise-card-heading': 'clamp(1.5rem, 1.1538rem + 1.5385vw, 2.5rem)', // 40px - 24px 
+        'expertise-card-description': 'clamp(1rem, 0.8053rem + 0.8654vw, 1.5625rem)', // 25px - 16px     
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',

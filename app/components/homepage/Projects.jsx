@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = ({ content }) => {
   const { project = [] } = content || {};
   const sliderContainerRef = useRef(null);
-  const projectRefs = useRef([]);
 
   useEffect(() => {
     if (sliderContainerRef.current) {
@@ -43,9 +42,24 @@ const Projects = ({ content }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Default for large screens
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets & mid-size screens
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640, // For small screens (mobile)
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
+  
 
   return (
     <div ref={sliderContainerRef} className="w-3/4 mx-auto my-[10vh] opacity-0 translate-y-10">

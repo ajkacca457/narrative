@@ -75,9 +75,9 @@ const Expertise = ({ content }) => {
       <div className="expertise-container w-3/4 mx-auto z-50 relative">
         {/* Title Section */}
         <div className="expertise-title flex items-center gap-x-[5vw] mb-[5vh]">
-          <h3 className="text-[50px] text-white">
+          <h3 className="text-expertise-heading-narrow text-white">
             <span ref={titleStartRef}>{title_start}</span>{" "}
-            <span ref={titleEndRef} className="text-highlight text-[75px]">
+            <span ref={titleEndRef} className="text-highlight text-expertise-heading-highlight">
               {title_end}
             </span>
           </h3>
@@ -89,7 +89,7 @@ const Expertise = ({ content }) => {
           />
         </div>
         
-        <div className="expertise-content grid grid-cols-1 md:grid-cols-3 gap-x-4 relative z-50">
+        <div className="expertise-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-50">
           {cards.length > 0 &&
             cards.map((data, index) => (
               <div
@@ -97,10 +97,10 @@ const Expertise = ({ content }) => {
                 ref={(el) => (cardRefs.current[index] = el)}
                 className="expertise-card expertise-gradient text-center text-white p-[25px] rounded-[20px] relative opacity-0"
               >
-                <h4 className="text-[40px] uppercase mb-10 expertise-card-title">
+                <h4 className="text-expertise-card-heading uppercase mb-10 expertise-card-title">
                   {data.card_title}
                 </h4>
-                <p className="text-[25px] opacity-60">{data.card_content}</p>
+                <p className="text-expertise-card-description opacity-60">{data.card_content}</p>
               </div>
             ))}
         </div>
