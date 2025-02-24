@@ -1,17 +1,30 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const CircularPattern = ({ customClass, width, height }) => {
+  const svgRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(svgRef.current, {
+      rotation: 360,
+      duration: 10, // Adjust the duration as needed
+      repeat: -1, // Infinite repeat
+      ease: "linear", // Smooth linear motion
+    });
+  }, []);
+
   return (
     <div className={customClass}>
       <svg
+        ref={svgRef} // Attach the ref to the SVG
         width={width || "379"}
         height={height || "366"}
         viewBox="0 0 379 366"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
+                <path
           d="M115.07 1.51867C116.282 1.00011 117.501 0.493839 118.726 0H260.274C261.499 0.493839 262.718 1.00011 263.93 1.51867H115.07Z"
           fill="white"
           fillOpacity="0.3"
