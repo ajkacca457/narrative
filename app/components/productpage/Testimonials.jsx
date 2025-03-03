@@ -32,8 +32,22 @@ const Testimonials = ({ content }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Default for large screens
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1208, // For tablets & mid-size screens
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // For small screens (mobile)
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -65,11 +79,11 @@ const Testimonials = ({ content }) => {
 
   return (
     <div ref={testimonialsRef} className="w-full testimonial h-auto pb-[20vh] z-50 relative">
-      <div className="testimonial-container w-3/4 mx-auto">
+      <div className="testimonial-container w-4/5 xl:w-3/4 mx-auto">
         <p ref={topHeadingRef} className="text-center text-blue-800 font-semibold opacity-0">
           {top_heading}
         </p>
-        <h1 ref={headingRef} className="text-white text-center text-[85px] max-w-[18ch] mx-auto opacity-0">
+        <h1 ref={headingRef} className="text-white text-center text-testimonial-heading max-w-[18ch] mx-auto opacity-0">
           {heading}
         </h1>
 

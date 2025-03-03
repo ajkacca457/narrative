@@ -25,6 +25,10 @@ module.exports = {
         'input-heading': 'clamp(0.9375rem, 0.2236rem + 3.1731vw, 3rem)', // 48px - 15px
         'input-highlight': 'clamp(0.75rem, 0.5769rem + 0.7692vw, 1.25rem)', // 20px - 12px
         'brand-heading': 'clamp(1.5rem, 0.3966rem + 4.9038vw, 4.6875rem)', // 75px - 24px
+        'square-card-heading': 'clamp(3rem, 2.4159rem + 2.5962vw, 4.6875rem)', // 75px - 48px
+        'square-card-title': 'clamp(1.25rem, 1.1635rem + 0.3846vw, 1.5rem)', // 24px - 20px
+        'square-card-content': 'clamp(0.875rem, 0.8101rem + 0.2885vw, 1.0625rem)', // 17px - 14px
+        'testimonial-heading':'clamp(2rem, 0.8534rem + 5.0962vw, 5.3125rem)', // 85px - 32px
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',
