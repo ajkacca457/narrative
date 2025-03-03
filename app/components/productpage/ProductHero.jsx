@@ -55,7 +55,7 @@ const ProductHero = ({ content }) => {
       <div className="product-hero-container w-3/4 mx-auto relative z-50">
         <div className="grid grid-cols-4 place-items-center">
           <div className="col-span-3">
-            <h1 ref={titleRef} className="text-white text-[96px] max-w-[17ch] opacity-0">
+            <h1 ref={titleRef} className="text-white text-hero-front max-w-[17ch] opacity-0">
               {heading}
             </h1>
           </div>
