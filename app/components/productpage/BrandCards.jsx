@@ -52,8 +52,8 @@ const BrandCards = ({ content }) => {
 
   return (
     <div ref={sectionRef} className="w-full brand-cards-element h-auto py-[20vh]">
-      <div className="brand-cards-container w-3/5 mx-auto">
-        <h1 ref={titleRef} className="brand-cards-title text-white text-center text-[75px] max-w-[17ch] mx-auto opacity-0">
+      <div className="brand-cards-container w-4/5 lg:w-3/5 mx-auto">
+        <h1 ref={titleRef} className="brand-cards-title text-white text-center text-brand-heading max-w-[17ch] mx-auto opacity-0">
           {title}
         </h1>
 
@@ -61,7 +61,7 @@ const BrandCards = ({ content }) => {
           {subtitle}
         </p>
 
-        <div className="grid grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
           {cards.length > 0 &&
             cards.map((card, index) => (
               <div

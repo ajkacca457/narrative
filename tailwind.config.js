@@ -24,6 +24,7 @@ module.exports = {
         'key-figure-content': 'clamp(0.875rem, 0.7885rem + 0.3846vw, 1.125rem)', // 18px - 14px
         'input-heading': 'clamp(0.9375rem, 0.2236rem + 3.1731vw, 3rem)', // 48px - 15px
         'input-highlight': 'clamp(0.75rem, 0.5769rem + 0.7692vw, 1.25rem)', // 20px - 12px
+        'brand-heading': 'clamp(1.5rem, 0.3966rem + 4.9038vw, 4.6875rem)', // 75px - 24px
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',
