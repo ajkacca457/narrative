@@ -22,6 +22,8 @@ module.exports = {
         'accordion-content': 'clamp(0.75rem, 0.7067rem + 0.1923vw, 0.875rem)', // 14px - 12px
         'key-figure-number': 'clamp(5.625rem, 4.976rem + 2.8846vw, 7.5rem)', // 120px - 90px
         'key-figure-content': 'clamp(0.875rem, 0.7885rem + 0.3846vw, 1.125rem)', // 18px - 14px
+        'input-heading': 'clamp(0.9375rem, 0.2236rem + 3.1731vw, 3rem)', // 48px - 15px
+        'input-highlight': 'clamp(0.75rem, 0.5769rem + 0.7692vw, 1.25rem)', // 20px - 12px
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',

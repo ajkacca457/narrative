@@ -69,25 +69,25 @@ const Input = ({ content }) => {
   return (
     <div ref={sectionRef} className="w-full input-element h-auto py-[20vh]">
       <div className="input-element-container w-3/4 mx-auto">
-        <div className="flex gap-x-[5vw]">
+        <div className="grid grid-cols-2 gap-x-[5vw]">
           {/* Image */}
-          <img ref={imageRef} src={input_image?.sizes?.large} alt="input-bg" className="opacity-0 scale-50" />
+          <img ref={imageRef} src={input_image?.sizes?.large} alt="input-bg" className="opacity-0 w-full h-auto object-contain" />
 
           <div className="text-white">
             {/* Heading */}
-            <h3 className="text-[48px] font-semibold">
+            <h3 className="text-input-heading font-semibold">
               <span ref={highlightRef} className="bg-[#00FFE1] text-black p-[5px] rounded-2xl opacity-0">
                 {input_heading_highlight}
               </span>{" "}
               <span ref={headingRef} className="opacity-0">{input_heading_light}</span>
             </h3>
 
-            <p ref={descriptionRef} className="text-[20px] text-[#929292] mt-6 opacity-0">
+            <p ref={descriptionRef} className="text-input-highlight text-[#929292] mt-6 opacity-0">
               {input_description}
             </p>
 
             {input_logos.length > 0 && (
-              <div ref={logosRef} className="grid grid-cols-3 gap-4 mt-6 opacity-0">
+              <div ref={logosRef} className="grid-cols-3 gap-4 mt-6 opacity-0 hidden lg:grid">
                 {input_logos.map((logo, index) => (
                   <img key={index} src={logo?.logo?.sizes?.medium} alt="logo" />
                 ))}
@@ -95,6 +95,17 @@ const Input = ({ content }) => {
             )}
           </div>
         </div>
+      </div>
+
+      <div className="z-10 w-3/4 mx-auto block lg:hidden">
+      {input_logos.length > 0 && (
+              <div className="grid grid-cols-3 gap-4 mt-6">
+                {input_logos.map((logo, index) => (
+                  <img key={index} src={logo?.logo?.sizes?.medium} alt="logo" />
+                ))}
+              </div>
+            )}
+
       </div>
     </div>
   );
