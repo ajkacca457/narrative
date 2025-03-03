@@ -29,6 +29,8 @@ module.exports = {
         'square-card-title': 'clamp(1.25rem, 1.1635rem + 0.3846vw, 1.5rem)', // 24px - 20px
         'square-card-content': 'clamp(0.875rem, 0.8101rem + 0.2885vw, 1.0625rem)', // 17px - 14px
         'testimonial-heading':'clamp(2rem, 0.8534rem + 5.0962vw, 5.3125rem)', // 85px - 32px
+        'card-one-heading':'clamp(2.25rem, 1.6442rem + 2.6923vw, 4rem)', // 64px - 36px
+        'card-content':'clamp(0.9375rem, 0.4832rem + 2.0192vw, 2.25rem)', // 36px - 15px
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',

@@ -6,9 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DoubleCardOne = ({ core_package }) => {
+const DoubleCardOne = ({ core_package, title }) => {
   const sectionRef = useRef(null);
-  const titleRef = useRef(null);
   const cardsRef = useRef([]);
 
   const cardIcon = (
@@ -42,12 +41,6 @@ const DoubleCardOne = ({ core_package }) => {
       },
     });
 
-    tl.fromTo(
-      titleRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
-    );
-
     // Animate each card with stagger
     tl.fromTo(
       cardsRef.current,
@@ -64,23 +57,29 @@ const DoubleCardOne = ({ core_package }) => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10">
-      <div ref={titleRef} className="text-white text-[36px] double-card-title -mt-2 opacity-0">
-        Title Here
+    <div className="h-full">
+      <h1 className="text-white double-cards-title text-card-one-heading col-span-full">
+        {title}
+      </h1>
+
+      <div
+        ref={sectionRef}
+        className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 h-full"
+      >
+        {core_package?.core_info?.length > 0 &&
+          core_package.core_info.map((card, index) => (
+            <div
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+              className="double-card-content flex gap-x-4 items-start mt-8 opacity-0"
+            >
+              <div className="double-card-icon">{cardIcon}</div>
+              <p className="text-white text-card-content double-card-title -mt-2">
+                {card.content}
+              </p>
+            </div>
+          ))}
       </div>
-      {core_package?.core_info?.length > 0 &&
-        core_package.core_info.map((card, index) => (
-          <div
-            key={index}
-            ref={(el) => (cardsRef.current[index] = el)}
-            className="double-card-content flex gap-x-4 items-start mt-8 opacity-0"
-          >
-            <div className="double-card-icon">{cardIcon}</div>
-            <p className="text-white text-[36px] double-card-title -mt-2">
-              {card.content}
-            </p>
-          </div>
-        ))}
     </div>
   );
 };

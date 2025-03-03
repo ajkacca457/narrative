@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DoubleCardTwo = ({ additional_package }) => {
+const DoubleCardTwo = ({ additional_package, title }) => {
   const sectionRef = useRef(null);
   const cardRefs = useRef([]);
 
@@ -78,33 +78,38 @@ const DoubleCardTwo = ({ additional_package }) => {
   );
 
   return (
-    <div
-      ref={sectionRef}
-      className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 flex flex-col justify-between opacity-0"
-    >
-      <div className="text-white text-[36px]">
-        {additional_package?.additional_info?.length > 0 &&
-          additional_package.additional_info.map((card, index) => (
-            <div
-              key={index}
-              ref={(el) => (cardRefs.current[index] = el)} // Assign each ref
-              className="double-card-content flex gap-x-4 items-center opacity-0" // Ensure opacity is 0 initially
-            >
-              <div className="double-card-icon">{cardBlueIcon}</div>
-              <p className="text-white text-[36px] double-card-title -mt-2">
-                {card.content}
-              </p>
-            </div>
-          ))}
+    <div className="h-full">
+      <h1 className="text-white double-cards-title text-card-one-heading col-span-full">
+        {title}
+      </h1>
+      <div
+        ref={sectionRef}
+        className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 flex flex-col justify-between opacity-0 h-full"
+      >
+        <div className="text-white text-[36px]">
+          {additional_package?.additional_info?.length > 0 &&
+            additional_package.additional_info.map((card, index) => (
+              <div
+                key={index}
+                ref={(el) => (cardRefs.current[index] = el)} // Assign each ref
+                className="double-card-content flex gap-x-4 items-center opacity-0" // Ensure opacity is 0 initially
+              >
+                <div className="double-card-icon">{cardBlueIcon}</div>
+                <p className="text-white text-card-content double-card-title -mt-2">
+                  {card.content}
+                </p>
+              </div>
+            ))}
+        </div>
+
+        <p className="text-white text-accordion-heading uppercase">
+          {additional_package?.package_content}
+        </p>
+
+        <button className="bg-[#05A895] text-white w-fit mx-auto text-accordion-heading px-4 py-2 rounded-md mb-[10vh]">
+          Schedule a call
+        </button>
       </div>
-
-      <p className="text-white text-[24px] uppercase">
-        {additional_package?.package_content}
-      </p>
-
-      <button className="bg-[#05A895] text-white w-fit mx-auto text-[32px] px-4 py-2 rounded-md mb-[10vh]">
-        Schedule a call
-      </button>
     </div>
   );
 };
