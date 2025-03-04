@@ -37,7 +37,7 @@ const ContactHero = ({ content }) => {
       <div className="product-hero-container w-3/4 mx-auto relative z-50">
         <h1
           ref={headingRef} 
-          className="text-white text-center text-[96px] font-extrabold uppercase"
+          className="text-white text-center text-hero-front font-extrabold uppercase"
         >
           {contact_hero_heading}
         </h1>

@@ -72,44 +72,44 @@ const ContactForm = ({ content }) => {
 
   return (
     <div ref={formRef} className="w-full contact-cards-element h-auto pb-[20vh]">
-      <div className="contact-cards-container w-3/5 mx-auto">
-        <h1 ref={titleRef} className="text-white text-[48px] text-center">
+      <div className="contact-cards-container w-5/6 lg:w-3/5 mx-auto">
+        <h1 ref={titleRef} className="text-white text-form-title text-center">
           {form_heading}
         </h1>
-        <form className="grid grid-cols-2 gap-6 mt-12">
+        <form className="block lg:grid lg:grid-cols-2 gap-6 mt-12">
           <input
             type="text"
             placeholder="First Name"
             ref={firstNameRef} 
-            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px]"
+            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px] w-full mb-4 lg:mb-0"
           />
           <input
             type="text"
             placeholder="Last Name"
             ref={lastNameRef} 
-            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px]"
+            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px] w-full mb-4 lg:mb-0"
           />
           <input
             type="text"
             placeholder="Phone Number"
             ref={phoneNumberRef} 
-            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px]"
+            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px] w-full mb-4 lg:mb-0"
           />
           <input
             type="email"
             placeholder="Your Email"
             ref={emailRef} 
-            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px]"
+            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px] w-full mb-4 lg:mb-0"
           />
           <textarea
             placeholder="Message"
             ref={messageRef} 
-            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px] col-span-2 h-[400px]"
+            className="bg-transparent border-2 border-[#00FFE1] p-4 rounded-[1rem] text-white text-[16px] col-span-2 h-[400px] w-full mb-4"
           />
 
           <button
             ref={buttonRef} 
-            className="text-white text-[16px] p-4 rounded-[1rem] col-span-2 uppercase"
+            className="text-white text-[16px] p-4 rounded-[1rem] col-span-2 uppercase w-full"
             style={{
               background: "linear-gradient(90deg, #00CFB7 0%, #00695D 100%)",
             }}
