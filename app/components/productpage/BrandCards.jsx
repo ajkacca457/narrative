@@ -73,14 +73,13 @@ const BrandCards = ({ content }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
           {cards.length > 0 &&
             cards.map((card, index) => (
-              <div class="w-full max-w-[422px] [background:linear-gradient(45deg,#172033,theme(colors.gray.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.600/.48)_80%,_theme(colors.teal.500)_86%,_theme(colors.teal.300)_90%,_theme(colors.teal.500)_94%,_theme(colors.gray.600/.48))_border-box] rounded-2xl border border-transparent animate-border">
+              <div class="w-full max-w-[422px] [background:linear-gradient(45deg,#172033,theme(colors.gray.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.600/.48)_80%,_theme(colors.teal.500)_86%,_theme(colors.teal.300)_90%,_theme(colors.teal.500)_94%,_theme(colors.gray.600/.48))_border-box] rounded-2xl border border-transparent animate-border" 
+              key={card.id}
+              ref={(el) => (cardsRef.current[index] = el)}
+              className="text-center">
                 <div class="p-5">
                   <div class="flex justify-between items-center">
-                    <div
-                      key={card.id}
-                      ref={(el) => (cardsRef.current[index] = el)}
-                      className="text-center"
-                    >
+                    <div>
                       <h3 className="text-white text-[22px] font-semibold brand-card-title mt-4">
                         {card.title}
                       </h3>
