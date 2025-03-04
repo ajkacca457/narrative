@@ -70,24 +70,6 @@ const BrandCards = ({ content }) => {
           {subtitle}
         </p>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
-          {cards.length > 0 &&
-            cards.map((card, index) => (
-              <div
-                key={card.id}
-                ref={(el) => (cardsRef.current[index] = el)}
-                className="brand-card text-center opacity-0"
-              >
-                <h3 className="text-white text-[22px] font-semibold brand-card-title mt-4">
-                  {card.title}
-                </h3>
-                <p className="text-[#A7A7A7] mt-6 text-[18px] brand-card-description">
-                  {card.content}
-                </p>
-              </div>
-            ))}
-        </div> */}
-
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
           {cards.length > 0 &&
             cards.map((card, index) => (
