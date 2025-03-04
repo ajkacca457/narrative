@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react"; // Import icons
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isBackground, setIsBackground] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -15,6 +16,7 @@ const Navbar = () => {
       } else {
         setIsVisible(true); // Show on scroll up
       }
+      setIsBackground(window.scrollY > 100); // Add background color
       setLastScrollY(window.scrollY);
     };
 
@@ -24,12 +26,17 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="w-[800px] h-[800px] absolute left-0 top-0 z-[200] radial-light opacity-60"></div>
+      <div className="w-[800px] h-[800px] absolute left-0 top-0 z-[200] radial-light opacity-60"></div>
       {/* Desktop Navbar */}
       <div
         className={`fixed hidden md:flex top-0 left-0 w-full transition-transform duration-500 ease-in-out z-[300] ${
           isVisible ? "translate-y-0" : "-translate-y-full"
-        } backdrop-blur-md z-[1000] py-4 px-[5%] justify-between items-center text-white`}
+        }         ${
+          isBackground
+            ? "bg-black bg-opacity-80 backdrop-blur-md"
+            : "bg-transparent backdrop-blur-none"
+        } 
+ z-[1000] py-4 px-[5%] justify-between items-center text-white`}
       >
         <Link href="/" className="z-[300]">
           <img src="./narrative-logo.png" alt="logo" className="h-10" />
@@ -61,7 +68,7 @@ const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } bg-black bg-opacity-80 backdrop-blur-md z-[1000] py-4 px-[5%] justify-between items-center text-white`}
       >
-          <Link href="/" className="z-[300]">
+        <Link href="/" className="z-[300]">
           <img src="./narrative-logo.png" alt="logo" className="h-8" />
         </Link>
 
