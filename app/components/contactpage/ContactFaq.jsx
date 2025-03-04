@@ -37,10 +37,10 @@ const ContactFaq = ({ content }) => {
 
   return (
     <div ref={sectionRef} className="faq">
-      <div className="w-2/4 mx-auto py-[10vh]">
+      <div className="w-[90%] md:w-3/4 xl:w-2/4 mx-auto py-[10vh]">
         <h1
           ref={titleRef}
-          className="text-[96px] text-white mb-10 text-center uppercase"
+          className="text-faq-title text-white mb-10 text-center uppercase"
           style={{
             background: "linear-gradient(90deg, #FFFFFF 0%, #767585 100%)",
             WebkitBackgroundClip: "text",
