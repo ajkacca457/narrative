@@ -62,7 +62,7 @@ const Hero = ({ content }) => {
   }, []);
 
   return (
-    <div className="w-full h-[50vh] sm:h-screen relative flex flex-col items-center justify-center">
+    <div className="w-full h-screen relative flex flex-col items-center justify-center">
       {/* SVG Decoration with Draw Effect */}
       <svg
         width="194"
