@@ -316,12 +316,16 @@
     max-width: 100%; 
     flex-shrink: 0;
   }
-  
-
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
 }
