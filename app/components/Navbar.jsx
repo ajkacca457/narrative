@@ -81,7 +81,7 @@ const Navbar = () => {
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="w-[300px] h-[300px] absolute left-[50px] top-[200px] -z-[1] radial-light opacity-60"></div>
+        <div className="w-[300px] h-[300px] absolute left-[50px] top-[100px] -z-[1] radial-light opacity-60"></div>
         {/* Mobile Links */}
         <nav className="flex flex-col gap-8 text-white text-2xl pt-[15vh] pb-[10vh]">
           <svg
