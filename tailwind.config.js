@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontSize: {
         'hero-front': 'clamp(1.875rem, 0.4471rem + 6.3462vw, 6rem)', //96px - 30px
+        'showreel-heading':'clamp(2.5rem, 0.5962rem + 8.4615vw, 8rem)', //128px - 40px
         'display-subheading': 'clamp(0.9375rem, -0.1226rem + 4.7115vw, 4rem)', //64px - 15px
         'display-heading': 'clamp(1.5rem, -0.0577rem + 6.9231vw, 6rem)', // 96px - 24px
         'expertise-heading-narrow': 'clamp(1.5rem, 0.9375rem + 2.5vw, 3.125rem)', // 50px - 24px
