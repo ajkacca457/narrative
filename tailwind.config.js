@@ -33,6 +33,8 @@ module.exports = {
         'card-content':'clamp(0.9375rem, 0.4832rem + 2.0192vw, 2.25rem)', // 36px - 15px
         'contact-card': 'clamp(1.25rem, 1.0769rem + 0.7692vw, 1.75rem)', // 28px - 20px
         'form-title': 'clamp(2rem, 1.6538rem + 1.5385vw, 3rem)', // 48px - 32px
+        'about-testimonial-heading': 'clamp(2.25rem, 1.7308rem + 2.3077vw, 3.75rem)', // 60px - 36px
+        'about-testimonial-card-title': 'clamp(2rem, 1.8269rem + 0.7692vw, 2.5rem)', // 40px - 32px
       },
       backgroundImage: {
         'expertise-gradient': 'linear-gradient(291.38deg, rgba(255, 255, 255, 0.098) 2.47%, rgba(255, 254, 254, 0.056) 101.3%)',

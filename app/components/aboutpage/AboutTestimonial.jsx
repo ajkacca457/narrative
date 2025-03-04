@@ -17,8 +17,22 @@ const AboutTestimonial = ({ content }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, 
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1208, 
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -69,7 +83,7 @@ const AboutTestimonial = ({ content }) => {
         </button>
         <h1
           ref={headingRef}
-          className="bg-double-gradient bg-clip-text text-transparent about-testimonial-title text-center text-[60px] max-w-[15ch] mx-auto"
+          className="bg-double-gradient bg-clip-text text-transparent about-testimonial-title text-center text-about-testimonial-heading max-w-[15ch] mx-auto"
         >
           {heading}
         </h1>
@@ -79,8 +93,8 @@ const AboutTestimonial = ({ content }) => {
             cards.map((data, index) => (
               <div key={index} className="about-testimonial-card px-4">
                 <div className="about-testimonial-card-content bg-about-testimonial-gradient mt-10 rounded-[1rem] p-8">
-                  <h3 className="text-white text-[40px] font-semibold">{data.title}</h3>
-                  <p className="text-white text-[18px] text-center my-5">{data.content}</p>
+                  <h3 className="text-white text-about-testimonial-card-title font-semibold">{data.title}</h3>
+                  <p className="text-white text-key-figure-content text-center my-5">{data.content}</p>
                   <div className="seperator w-1/5 mx-auto h-[2px] bg-white my-8"></div>
                   <h4 className="text-white text-[30px]">{data.name}</h4>
                 </div>
