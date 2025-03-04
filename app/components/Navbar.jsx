@@ -62,7 +62,6 @@ const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } bg-black bg-opacity-80 backdrop-blur-md z-[1000] py-4 px-[5%] justify-between items-center text-white`}
       >
-          <div className="w-[300px] h-[300px] absolute left-[50px] top-[100px] -z-[1] radial-light opacity-40"></div>
           <Link href="/" className="z-[300]">
           <img src="./narrative-logo.png" alt="logo" className="h-8" />
         </Link>
@@ -82,6 +81,7 @@ const Navbar = () => {
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
+        <div className="w-[300px] h-[300px] absolute left-[50px] top-[200px] -z-[1] radial-light opacity-60"></div>
         {/* Mobile Links */}
         <nav className="flex flex-col gap-8 text-white text-2xl pt-[15vh] pb-[10vh]">
           <svg
