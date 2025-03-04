@@ -50,7 +50,7 @@ const AboutEnquery = ({ content }) => {
 
   return (
     <div ref={sectionRef} className="w-full about-enquiry h-auto py-[20vh] relative z-50">
-      <div className="about-enquiry-container w-[1140px] mx-auto rounded-[2rem] relative border-2 border-white p-6">
+      <div className="about-enquiry-container w-[95%] max-w-[1140px] mx-auto rounded-[2rem] relative border-2 border-white p-6">
         <div className="bg-[#1E1E21] rounded-[2rem] py-[10vh]">
           <div className="flex items-center gap-4 w-fit mx-auto">
             <svg
@@ -76,7 +76,7 @@ const AboutEnquery = ({ content }) => {
             </svg>
           </div>
 
-          <h1 ref={mainHeadingRef} className="text-white text-[64px] font-bold text-center max-w-[15ch] mx-auto">
+          <h1 ref={mainHeadingRef} className="text-white text-we-do-card-heading font-bold text-center max-w-[15ch] mx-auto">
             {heading}
           </h1>
           <p ref={subheadingRef} className="text-[#929292] max-w-[60ch] text-center mx-auto">

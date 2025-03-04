@@ -278,7 +278,7 @@ const AboutHero = ({content}) => {
           </svg>
         </div>
         <div className="text-center h-screen flex flex-col justify-center items-center">
-          <h1 className="text-white text-[96px] uppercase font-bold about-title">{heading}</h1>  
+          <h1 className="text-white text-hero-front uppercase font-bold about-title">{heading}</h1>  
         </div>
       </div>
     </div>
