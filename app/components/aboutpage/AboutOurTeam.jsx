@@ -49,16 +49,24 @@ const AboutOurTeam = ({ content }) => {
 
   return (
     <div ref={sectionRef} className="w-full about-expertise-element h-auto py-[20vh]">
-      <div className="about-expertise-container w-2/4 mx-auto">
+      <div className="about-expertise-container w-5/6 lg:w-2/4 mx-auto">
         <div>
-          <h1 ref={titleRef} className="text-[96px] font-bold text-white text-center">
-            {heading}
-          </h1>
+        <h1
+          ref={titleRef}
+          className="text-faq-title team-title text-white mb-10 text-center opacity-0"
+          style={{
+            background: "linear-gradient(90deg, #FFFFFF 0%, #767585 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          {heading}
+        </h1>
           <p ref={subtitleRef} className="text-white text-center my-10 text-[16px] max-w-[70ch] mx-auto">
             {subheading}
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-10 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
           {cards.length > 0 &&
             cards.map((data, index) => (
               <div
