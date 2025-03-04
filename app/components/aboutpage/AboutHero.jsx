@@ -1,8 +1,42 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 
-const AboutHero = ({content}) => {
+const getRandomPosition = (safeZoneRadius = 100, maxRadius = 200, placedPositions = []) => {
+  let x, y, validPosition = false;
+  let maxAttempts = 50; // Avoid infinite loops
 
-  const {heading=""}= content || {};
+  while (!validPosition && maxAttempts > 0) {
+    maxAttempts--;
+
+    const angle = Math.random() * 2 * Math.PI; // Random angle
+    const radius = Math.random() * (maxRadius - safeZoneRadius) + safeZoneRadius; // Ensure outside safe zone
+    x = Math.cos(angle) * radius;
+    y = Math.sin(angle) * radius;
+
+    // Check for overlap with existing positions
+    validPosition = placedPositions.every(({ px, py }) => {
+      const distance = Math.sqrt((px - x) ** 2 + (py - y) ** 2);
+      return distance > 60; // Minimum gap between reviews
+    });
+  }
+
+  return { x, y };
+};
+
+const AboutHero = ({ content }) => {
+  const { heading = "", reviews = [] } = content || {};
+  const [positions, setPositions] = useState([]);
+
+
+  useEffect(() => {
+    let placedPositions = [];
+    const newPositions = reviews.map(() => {
+      const pos = getRandomPosition(400, 400, placedPositions);
+      placedPositions.push({ px: pos.x, py: pos.y });
+      return pos;
+    });
+    setPositions(newPositions);
+  }, [reviews]);
 
   return (
     <div className="w-full reviews h-auto py-[10vh] relative">
@@ -276,8 +310,38 @@ const AboutHero = ({content}) => {
             </defs>
           </svg>
         </div>
+
+        <div className="absolute w-full h-full flex justify-center items-center">
+          {reviews.map((review, index) => {
+          const { x, y } = positions[index] || { x: 0, y: 0 };
+
+            return (
+              <div
+                key={index}
+                className="absolute bg-[#2A5155] p-3 rounded-full text-white text-center shadow-lg flex items-center w-fit transition-transform duration-700 ease-out m-4"
+                style={{
+                  transform: `translate(${x}px, ${y}px)`, // Apply random positioning
+                }}
+              >
+                <img
+                  src={
+                    review?.image?.sizes?.thumbnail ||
+                    "https://via.placeholder.com/50"
+                  }
+                  alt={review.name}
+                  className="w-10 h-10 rounded-full mx-auto mb-2"
+                />
+                <p className="text-xs">{review.content}</p>
+                <p className="text-[10px] font-bold">{review.name}</p>
+              </div>
+            );
+          })}
+        </div>
+
         <div className="text-center h-screen flex flex-col justify-center items-center">
-          <h1 className="text-white text-hero-front uppercase font-bold about-title">{heading}</h1>  
+          <h1 className="text-white text-hero-front uppercase font-bold about-title z-[200]">
+            {heading}
+          </h1>
         </div>
       </div>
     </div>
