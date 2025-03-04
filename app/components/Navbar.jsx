@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Import icons
-import BlurredCircle from "./decors/BlurredCircle";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -31,7 +30,6 @@ const Navbar = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } bg-black bg-opacity-80 backdrop-blur-md z-[1000] py-4 px-[5%] justify-between items-center text-white`}
       >
-        <BlurredCircle customClass={"absolute left-0 top-[0px] z-[200]"} />
         <Link href="/" className="z-[300]">
           <img src="./narrative-logo.png" alt="logo" className="h-10" />
         </Link>
