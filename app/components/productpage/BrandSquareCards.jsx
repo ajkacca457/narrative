@@ -49,7 +49,7 @@ const BrandSquareCards = ({ content }) => {
           <span className="text-highlight text-square-card-heading">{heading_strong}</span>
         </h3>
       </div>
-      <div className="square-cards-container w-4/5 lg:w-3/4 mx-auto">
+      <div className="square-cards-container w-4/5 lg:w-3/4 mx-auto backdrop-blur-sm border border-gray-600">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-5/6 lg:w-4/6 mx-auto py-[20vh]">
           {cards.length > 0 &&
             cards.map((card, index) => (

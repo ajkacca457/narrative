@@ -13,14 +13,13 @@ const AboutHero = ({content}) => {
             "radial-gradient(ellipse at top, rgba(0, 0, 0, 0.9), black 80%)",
         }}
       ></div>{" "}
-      <div className="product-hero-container w-3/4 mx-auto relative">
+      <div className="product-hero-container w-full mx-auto relative">
         <div className="absolute -top-[35px] left-1/2 transform -translate-x-1/2 -z-[3]">
           <svg
-            width="1050"
-            height="1050"
             viewBox="0 0 1296 1296"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="w-screen h-screen scale-[110%]"
           >
             <circle
               cx="648"

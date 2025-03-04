@@ -84,7 +84,7 @@ const DoubleCardTwo = ({ additional_package, title }) => {
       </h1>
       <div
         ref={sectionRef}
-        className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 flex flex-col justify-between opacity-0 h-full"
+        className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 flex flex-col justify-between opacity-0 h-full backdrop-blur-md"
       >
         <div className="text-white text-[36px]">
           {additional_package?.additional_info?.length > 0 &&

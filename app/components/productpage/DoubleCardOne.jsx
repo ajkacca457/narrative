@@ -64,7 +64,7 @@ const DoubleCardOne = ({ core_package, title }) => {
 
       <div
         ref={sectionRef}
-        className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 h-full"
+        className="double-card border-2 border-[#2D2D2D] px-8 py-[5vh] rounded-[1rem] mt-10 h-full backdrop-blur-sm"
       >
         {core_package?.core_info?.length > 0 &&
           core_package.core_info.map((card, index) => (

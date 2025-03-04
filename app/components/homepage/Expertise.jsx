@@ -95,7 +95,7 @@ const Expertise = ({ content }) => {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="expertise-card expertise-gradient text-center text-white p-[25px] rounded-[20px] relative opacity-0"
+                className="expertise-card expertise-gradient text-center text-white p-[25px] rounded-[20px] relative opacity-0 backdrop-blur-sm"
               >
                 <h4 className="text-expertise-card-heading uppercase mb-10 expertise-card-title">
                   {data.card_title}
