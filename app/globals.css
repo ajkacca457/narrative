@@ -242,6 +242,9 @@
     font-family: "Inter-Regular", sans-serif;
   }
 
+  .review-container p{
+    font-family: "Urbanist-Regular", sans-serif !important;
+  }
 
   progress {
     /* General styles for the progress element */
@@ -327,4 +330,38 @@
   inherits: false;
   initial-value: 0deg;
   syntax: '<angle>';
+}
+
+/* Wiggle effect for Left-pointing arrows */
+@keyframes point-left {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-point-left {
+  animation: point-left 1s ease-in-out infinite;
+}
+
+/* Wiggle effect for Right-pointing arrows */
+@keyframes point-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-point-right {
+  animation: point-right 1s ease-in-out infinite;
 }
