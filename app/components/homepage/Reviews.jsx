@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import StackedCards from "./DeckCards";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,11 +63,7 @@ const Reviews = () => {
           </div>
 
           <div ref={column2Ref} className="col-span-1 opacity-0 flex items-center">
-            <img
-              src="/reviews/review-card.png"
-              alt="review1"
-              className="w-full h-auto"
-            />
+              <StackedCards />
           </div>
         </div>
       </div>
