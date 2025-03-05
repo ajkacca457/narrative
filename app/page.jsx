@@ -83,7 +83,11 @@ async function Home() {
       {acfContent.some((block) => block.acf_fc_layout === "reviews") && (
         <div className="relative">
           <div className="w-[800px] h-[800px] absolute -right-[150px] top-[250px] -z-[1] radial-light opacity-40"></div>
-          <Reviews />
+          {acfContent
+            .filter((block) => block.acf_fc_layout === "reviews")
+            .map((block, index) => (
+              <Reviews key={index} content={block} />
+            ))}
         </div>
       )}
 

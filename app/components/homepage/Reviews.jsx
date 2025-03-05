@@ -6,10 +6,16 @@ import StackedCards from "./DeckCards";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Reviews = () => {
+const Reviews = ({content}) => {
+
+
+  const { title="Reviews", review=[]}= content || {};
+
   const titleRef = useRef(null);
   const column1Ref = useRef(null);
   const column2Ref = useRef(null);
+
+  console.log(content);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -49,7 +55,7 @@ const Reviews = () => {
       <div className="reviews-container w-3/5 mx-auto">
         <div className="reviews-title flex items-center gap-x-[5vw] mb-[5vh]">
           <h3 ref={titleRef} className="text-highlight text-expertise-heading-highlight text-white uppercase">
-            Reviews
+            {title}
           </h3>
         </div>
 
@@ -63,7 +69,7 @@ const Reviews = () => {
           </div>
 
           <div ref={column2Ref} className="col-span-1 opacity-0 flex items-center">
-              <StackedCards />
+              <StackedCards review={review} />
           </div>
         </div>
       </div>
