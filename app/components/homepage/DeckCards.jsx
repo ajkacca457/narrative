@@ -18,7 +18,7 @@ const StackedCards = ({ review }) => {
   };
 
   return (
-    <div className="relative w-[400px] h-[450px] mx-auto flex items-center justify-center">
+    <div className="relative w-[300px] h-[350px] md:w-[400px] md:h-[450px] mx-auto flex items-center justify-center -ml-[35px] mt-8 md:ml-0 md:mt-0">
       {review.length > 0 &&
         review.map((block, i) => {
           if (i < currentIndex || i >= currentIndex + visibleCards) return null; // Show only 5
