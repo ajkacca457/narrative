@@ -15,7 +15,7 @@ import CircularPattern from "./components/decors/CircularPattern.jsx";
 
 async function Home() {
   const res = await fetch(
-    "https://narrative-rest-7d1f3a.ingress-bonde.ewp.live/wp-json/wp/v2/pages?slug=home&acf_format=standard",
+    "https://narrative-10a4cba.ingress-alpha.ewp.live/wp-json/wp/v2/pages?slug=home&acf_format=standard",
     { cache: "no-store" }
   );
   const data = await res.json();
