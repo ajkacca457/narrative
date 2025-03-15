@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import CircularPattern from "../decors/CircularPattern";
 
 const ProductHero = ({ content }) => {
   const { heading = "" } = content || {};
@@ -9,10 +10,23 @@ const ProductHero = ({ content }) => {
   const titleRef = useRef(null);
   const imageRef = useRef(null);
   const buttonRef = useRef(null);
+  const svgPathRef = useRef(null);
+  
+  
 
   useEffect(() => {
     const tl = gsap.timeline();
 
+    const path = svgPathRef.current;
+    const pathLength = path.getTotalLength();
+
+    gsap.set(path, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
+
+    tl.to(path, {
+      strokeDashoffset: 0, 
+      duration: 1,
+      ease: "power2.out",
+    });
     // Title animation: Staggered fade-in while keeping spaces
     gsap.set(titleRef.current, { opacity: 1 }); // Ensure visibility
     const words = heading.split(" "); // Split words instead of letters
@@ -47,15 +61,41 @@ const ProductHero = ({ content }) => {
 
   return (
     <div className="w-full reviews h-auto py-[10vh] relative">
+
+      {/* SVG Decoration with Draw Effect */}
+      <svg
+        width="194"
+        height="127"
+        viewBox="0 0 194 127"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute top-[200px] left-0"
+      >
+        <path
+          ref={svgPathRef}
+          d="M192.334 1.98498C192.334 1.98498 157.992 7.47165 139.18 18.3194C103.575 38.8496 41.9236 86.7784 78.7164 104.459C110.718 119.837 138.449 88.5693 133.493 62.6156C127.766 32.6285 73.6878 63.485 43.3135 83.0057C15.579 100.83 1.84912 124.936 1.84912 124.936"
+          stroke="white"
+          strokeOpacity="0.15"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </svg>
+
+      {/* Rotating Circular Pattern */}
+      <div className="absolute -bottom-[100px] left-[150px]">
+        <CircularPattern />
+      </div>
+
+
       <img
         src="/product/Line_BG.png"
         alt="product-grid"
         className="absolute h-full w-[600px] right-[100px] top-0 z-20 opacity-60"
       />
-      <div className="product-hero-container w-3/4 mx-auto relative z-50">
+      <div className="product-hero-container w-3/4 mx-auto relative z-50 mt-[15vh]">
         <div className="grid grid-cols-4 place-items-center">
           <div className="col-span-3">
-            <h1 ref={titleRef} className="text-white text-hero-front max-w-[17ch] opacity-0">
+            <h1 ref={titleRef} className="text-white text-hero-front max-w-[17ch] opacity-0 font-[600] leading-[1.2]">  
               {heading}
             </h1>
           </div>
