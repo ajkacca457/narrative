@@ -53,7 +53,7 @@ const BrandSquareCards = ({ content }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-5/6 lg:w-4/6 mx-auto py-[20vh]">
           {cards.length > 0 &&
             cards.map((card, index) => (
-              <div className="text-center w-full max-w-[422px] [background:linear-gradient(45deg,#172033,theme(colors.gray.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.600/.48)_80%,_theme(colors.teal.500)_86%,_theme(colors.teal.300)_90%,_theme(colors.teal.500)_94%,_theme(colors.gray.600/.48))_border-box] border border-transparent animate-border" 
+              <div className="text-center w-full max-w-[422px] rounded-xl [background:linear-gradient(45deg,#172033,theme(colors.gray.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.600/.48)_80%,_theme(colors.teal.500)_86%,_theme(colors.teal.300)_90%,_theme(colors.teal.500)_94%,_theme(colors.gray.600/.48))_border-box] border border-transparent animate-border" 
               key={card.id}
               ref={(el) => (cardsRef.current[index] = el)}
               >
