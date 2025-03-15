@@ -7,7 +7,10 @@ import ContentGrid from "./ContentGrid";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Display = () => {
+const Display = ({content}) => {
+
+  const { title="Narratives", top_title="We Create", display_videos=[] } = content || {};
+
   const svgRef = useRef(null);
   const h3Ref = useRef(null);
   const h2Ref = useRef(null);
@@ -86,14 +89,14 @@ const Display = () => {
 
         {/* Animated Headings */}
         <h3 ref={h3Ref} className="text-display-subheading text-white opacity-0">
-          WE CREATE
+          {top_title}
         </h3>
         <h2 ref={h2Ref} className="text-display-heading text-white uppercase opacity-0">
-          Videos/Brands/Narrative
+          {title}
         </h2>
       </div>
 
-      <ContentGrid />
+      <ContentGrid videos={display_videos} />
     </div>
   );
 };

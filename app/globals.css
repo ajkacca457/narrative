@@ -253,7 +253,10 @@
   .accordion-content ul {
     @apply list-disc list-inside;
   }
-
+  .video-grid iframe {
+    @apply object-cover w-full h-full min-h-[400px] rounded-md;
+  }
+  
   progress {
     /* General styles for the progress element */
     width: 100%;
