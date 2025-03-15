@@ -19,15 +19,23 @@ const page = async () => {
         <CircularPattern customClass="absolute top-[200px] left-[200px]" />
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "contact_hero") {
+          if (
+            block.acf_fc_layout === "contact_hero" &&
+            block.show_contact_hero === true
+          ) {
             return <ContactHero key={index} content={block} />;
           }
+          return null;
         })}
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "contact_cards") {
+          if (
+            block.acf_fc_layout === "contact_cards" &&
+            block.show_contact_cards === true
+          ) {
             return <ContactInfo key={index} content={block} />;
           }
+          return null;
         })}
       </div>
 
@@ -35,9 +43,10 @@ const page = async () => {
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[50px] -z-[1] radial-light opacity-40"></div>
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "form_data") {
+          if (block.acf_fc_layout === "form_data" && block.show_form === true) {
             return <ContactForm key={index} content={block} />;
           }
+          return null;
         })}
         <CircularPattern customClass="absolute -bottom-[200px] -right-[50px]" />
       </div>
@@ -51,9 +60,10 @@ const page = async () => {
         />
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "faq") {
+          if (block.acf_fc_layout === "faq" && block.show_faq === true) {
             return <ContactFaq key={index} content={block} />;
           }
+          return null;
         })}
       </div>
     </div>
