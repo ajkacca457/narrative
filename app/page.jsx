@@ -61,7 +61,10 @@ async function Home() {
             height="183"
           />
           {acfContent
-            .filter((block) => block.acf_fc_layout === "expertise")
+            .filter(
+              (block) =>
+                block.acf_fc_layout === "expertise" && block.show_expertise
+            )
             .map((block, index) => (
               <Expertise key={index} content={block} />
             ))}
@@ -76,13 +79,18 @@ async function Home() {
           <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
           <div className="w-[800px] h-[800px] absolute -right-[150px] top-[400px] -z-[1] radial-light opacity-40"></div>
           {acfContent
-            .filter((block) => block.acf_fc_layout === "projects")
+            .filter(
+              (block) =>
+                block.acf_fc_layout === "projects" && block.show_projects
+            )
             .map((block, index) => (
               <Projects key={index} content={block} />
             ))}
 
           {acfContent
-            .filter((block) => block.acf_fc_layout === "process")
+            .filter(
+              (block) => block.acf_fc_layout === "process" && block.show_process
+            )
             .map((block, index) => (
               <HowWeDo key={index} content={block} />
             ))}
@@ -94,7 +102,9 @@ async function Home() {
         <div className="relative">
           <div className="w-[800px] h-[800px] absolute -right-[150px] top-[250px] -z-[1] radial-light opacity-40"></div>
           {acfContent
-            .filter((block) => block.acf_fc_layout === "reviews")
+            .filter(
+              (block) => block.acf_fc_layout === "reviews" && block.show_reviews
+            )
             .map((block, index) => (
               <Reviews key={index} content={block} />
             ))}
@@ -106,7 +116,7 @@ async function Home() {
         <div className="relative">
           <div className="w-[800px] h-[800px] absolute -left-[150px] top-[300px] -z-[1] radial-light opacity-40"></div>
           {acfContent
-            .filter((block) => block.acf_fc_layout === "faq")
+            .filter((block) => block.acf_fc_layout === "faq" && block.show_faq)
             .map((block, index) => (
               <Faq key={index} content={block} />
             ))}
@@ -118,7 +128,10 @@ async function Home() {
       {acfContent.some((block) => block.acf_fc_layout === "key_figures") && (
         <>
           {acfContent
-            .filter((block) => block.acf_fc_layout === "key_figures")
+            .filter(
+              (block) =>
+                block.acf_fc_layout === "key_figures" && block.show_figure
+            )
             .map((block, index) => (
               <KeyFigure key={index} content={block} />
             ))}
@@ -127,7 +140,11 @@ async function Home() {
       {acfContent.some((block) => block.acf_fc_layout === "brand_logos") && (
         <>
           {acfContent
-            .filter((block) => block.acf_fc_layout === "brand_logos")
+            .filter(
+              (block) =>
+                block.acf_fc_layout === "brand_logos" &&
+                block.show_logos === true
+            )
             .map((block, index) => (
               <LogoSlider key={index} content={block} />
             ))}
