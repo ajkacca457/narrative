@@ -19,9 +19,13 @@ const page = async () => {
   return (
     <div>
       {acfContent.map((block, index) => {
-        if (block.acf_fc_layout === "about_hero") {
+        if (
+          block.acf_fc_layout === "about_hero" &&
+          block.show_about_hero === true
+        ) {
           return <AboutHero key={index} content={block} />;
         }
+        return null; // Ensures that if the condition is not met, nothing is rendered for that block
       })}
 
       <div className="relative">
@@ -2852,9 +2856,13 @@ const page = async () => {
         </div>
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "testimonials") {
+          if (
+            block.acf_fc_layout === "testimonials" &&
+            block.show_testimonials === true
+          ) {
             return <AboutTestimonial key={index} content={block} />;
           }
+          return null;
         })}
       </div>
       <div className="relative">
@@ -2872,17 +2880,22 @@ const page = async () => {
           height="600px"
         />
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "our_team") {
+          if (block.acf_fc_layout === "our_team" && block.show_team === true) {
             return <AboutOurTeam key={index} content={block} />;
           }
+          return null;
         })}
       </div>
 
       <div className="relative">
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "display") {
+          if (
+            block.acf_fc_layout === "display" &&
+            block.show_display === true
+          ) {
             return <AboutEnquery key={index} content={block} />;
           }
+          return null;
         })}
         <CircularPattern
           customClass="absolute -left-[150px] -bottom-[100px] z-10"
