@@ -43,12 +43,7 @@ const Faq = ({ content }) => {
       <div className="w-[90%] md:w-3/4 xl:w-2/4 mx-auto py-[10vh]">
         <h1
           ref={titleRef}
-          className="text-faq-title text-white mb-10 text-center opacity-0"
-          style={{
-            background: "linear-gradient(90deg, #FFFFFF 0%, #767585 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
+          className="text-faq-title mb-10 text-center opacity-0 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent"
         >
           {title}
         </h1>

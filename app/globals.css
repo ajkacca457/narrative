@@ -140,6 +140,10 @@
   .expertise-card-title {
     font-family: 'Gilory-Bold', sans-serif;
   }
+
+  .about-inquiry-title {
+    font-family: 'Inter-Bold', sans-serif;
+  }
   
   .expertise-card,
   .how-we-do-card {
@@ -256,7 +260,7 @@
   .video-grid iframe {
     @apply object-cover w-full h-full min-h-[400px] rounded-md;
   }
-  
+
   progress {
     /* General styles for the progress element */
     width: 100%;
