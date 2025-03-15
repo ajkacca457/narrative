@@ -58,7 +58,7 @@ const Accordion = ({ accordionItems }) => {
             }}
             className="overflow-hidden transition-all duration-300 ease-in-out"
           >
-            <div className="pb-5 text-sm text-[#929292] text-accordion-content">{content}</div>
+            <div className="pb-5 text-[#929292] text-accordion-content accordion-content" dangerouslySetInnerHTML={{ __html: content }}></div>
           </div>
         </div>
       ))}

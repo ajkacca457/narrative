@@ -246,6 +246,14 @@
     font-family: "Urbanist-Regular", sans-serif !important;
   }
 
+  .accordion-content p {
+    @apply mb-6;
+  }
+
+  .accordion-content ul {
+    @apply list-disc list-inside;
+  }
+
   progress {
     /* General styles for the progress element */
     width: 100%;

@@ -15,8 +15,6 @@ const Reviews = ({content}) => {
   const column1Ref = useRef(null);
   const column2Ref = useRef(null);
 
-  console.log(content);
-
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
