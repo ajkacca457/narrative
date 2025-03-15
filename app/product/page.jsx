@@ -21,24 +21,36 @@ const page = async () => {
   return (
     <div className="product-page">
       {acfContent.map((block, index) => {
-        if (block.acf_fc_layout === "product_hero") {
+        if (
+          block.acf_fc_layout === "product_hero" &&
+          block.show_product_hero === true
+        ) {
           return <ProductHero key={index} content={block} />;
         }
+        return null;
       })}
 
       <div className="relative">
         <div className="w-[800px] h-[800px] absolute -right-[150px] bottom-[500px] -z-[1] radial-light opacity-40"></div>
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "product_video") {
+          if (
+            block.acf_fc_layout === "product_video" &&
+            block.show_product_video === true
+          ) {
             return <VideoEmbed key={index} content={block} />;
           }
+          return null;
         })}
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "input_data") {
+          if (
+            block.acf_fc_layout === "input_data" &&
+            block.show_product_input === true
+          ) {
             return <Input key={index} content={block} />;
           }
+          return null;
         })}
 
         <CircularPattern customClass="absolute right-[50px] bottom-[50px]" />
@@ -74,9 +86,13 @@ const page = async () => {
           />
         </svg>
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "brand_cards") {
+          if (
+            block.acf_fc_layout === "brand_cards" &&
+            block.show_brand_cards === true
+          ) {
             return <BrandCards key={index} content={block} />;
           }
+          return null;
         })}
         <CircularPattern
           customClass="absolute -left-[150px] top-[400px]"
@@ -137,11 +153,15 @@ const page = async () => {
         </div>
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "work_cards") {
+          if (
+            block.acf_fc_layout === "work_cards" &&
+            block.show_work_cards === true
+          ) {
             return <BrandSquareCards key={index} content={block} />;
           }
+          return null;
         })}
-      </div>    
+      </div>
       <div className="relative">
         <div className="absolute -top-[200px] left-1/2 transform -translate-x-1/2 z-20 opacity-50">
           <svg
@@ -588,9 +608,13 @@ const page = async () => {
         </div>
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "testimonials") {
+          if (
+            block.acf_fc_layout === "testimonials" &&
+            block.show_testimonials === true
+          ) {
             return <Testimonials key={index} content={block} />;
           }
+          return null;
         })}
       </div>
 
@@ -1041,9 +1065,13 @@ const page = async () => {
         <div className="w-[800px] h-[800px] absolute -right-[150px] top-[50px] -z-[1] radial-light opacity-40"></div>
 
         {acfContent.map((block, index) => {
-          if (block.acf_fc_layout === "packages") {
+          if (
+            block.acf_fc_layout === "packages" &&
+            block.show_packages === true
+          ) {
             return <DoubleCards key={index} content={block} />;
           }
+          return null;
         })}
       </div>
     </div>
