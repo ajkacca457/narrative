@@ -3,16 +3,17 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import CircularPattern from "../decors/CircularPattern";
+import RotatingImages from "./RotatingImages";
 
 const ProductHero = ({ content }) => {
-  const { heading = "" } = content || {};
+  const { heading = "", social_media = [] } = content || {};
 
   const titleRef = useRef(null);
   const imageRef = useRef(null);
   const buttonRef = useRef(null);
   const svgPathRef = useRef(null);
-  
-  
+
+  console.log(social_media);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -20,10 +21,13 @@ const ProductHero = ({ content }) => {
     const path = svgPathRef.current;
     const pathLength = path.getTotalLength();
 
-    gsap.set(path, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
+    gsap.set(path, {
+      strokeDasharray: pathLength,
+      strokeDashoffset: pathLength,
+    });
 
     tl.to(path, {
-      strokeDashoffset: 0, 
+      strokeDashoffset: 0,
       duration: 1,
       ease: "power2.out",
     });
@@ -31,7 +35,9 @@ const ProductHero = ({ content }) => {
     gsap.set(titleRef.current, { opacity: 1 }); // Ensure visibility
     const words = heading.split(" "); // Split words instead of letters
     titleRef.current.innerHTML = words
-      .map(word => `<span class="inline-block opacity-0">${word}&nbsp;</span>`)
+      .map(
+        (word) => `<span class="inline-block opacity-0">${word}&nbsp;</span>`
+      )
       .join("");
 
     tl.to(titleRef.current.children, {
@@ -61,7 +67,6 @@ const ProductHero = ({ content }) => {
 
   return (
     <div className="w-full reviews h-auto py-[10vh] relative">
-
       {/* SVG Decoration with Draw Effect */}
       <svg
         width="194"
@@ -86,7 +91,6 @@ const ProductHero = ({ content }) => {
         <CircularPattern />
       </div>
 
-
       <img
         src="/product/Line_BG.png"
         alt="product-grid"
@@ -94,26 +98,15 @@ const ProductHero = ({ content }) => {
       />
       <div className="product-hero-container w-3/4 mx-auto relative z-50 mt-[15vh]">
         <div className="grid grid-cols-4 place-items-center">
-          <div className="col-span-3">
-            <h1 ref={titleRef} className="text-white text-hero-front max-w-[17ch] opacity-0 font-[600] leading-[1.2]">  
+          <div className="col-span-full lg:col-span-3">
+            <h1
+              ref={titleRef}
+              className="text-white text-hero-front max-w-[17ch] opacity-0 font-[600] leading-[1.2]"
+            >
               {heading}
             </h1>
           </div>
-
-          <div className="relative col-span-1">
-            <img
-              ref={imageRef}
-              src="/product/product-hero.png"
-              alt="product-hero"
-              className="relative z-50 opacity-0"
-            />
-            <button
-              ref={buttonRef}
-              className="text-white text-[18px] mt-6 py-6 px-8 w-full mx-auto font-bold bg-[#1E1E21] rounded-full opacity-0"
-            >
-              Product
-            </button>
-          </div>
+          <RotatingImages social_media={social_media} />
         </div>
       </div>
     </div>

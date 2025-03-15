@@ -384,3 +384,25 @@
 .animate-point-right {
   animation: point-right 1s ease-in-out infinite;
 }
+
+@keyframes rotateClockwise {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(100%, 0); } /* Move Right */
+  50% { transform: translate(100%, 100%); } /* Move Down */
+  75% { transform: translate(0, 100%); } /* Move Left */
+  100% { transform: translate(0, 0); } /* Back to Start */
+}
+
+/* Grid container */
+.rotating-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Image boxes */
+.rotate-item {
+  animation: rotateClockwise 4s infinite ease-in-out;
+}
+
