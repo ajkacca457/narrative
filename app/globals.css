@@ -261,6 +261,10 @@
     @apply object-cover w-full h-full min-h-[400px] rounded-md;
   }
 
+.iframe-container iframe {
+  @apply object-cover w-full h-full min-h-[400px] rounded-md;
+}
+
   progress {
     /* General styles for the progress element */
     width: 100%;

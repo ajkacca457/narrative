@@ -34,11 +34,7 @@ const VideoEmbed = ({ content }) => {
         ref={videoRef}
         className="video-container w-[90%] max-w-[1140px] overflow-hidden mx-auto rounded-[2rem] relative border-2 border-white p-6 opacity-0 scale-50"
       >
-        <div className="overlay bg-black opacity-40 w-full h-full absolute top-0 left-0 z-10"></div>
-        <div dangerouslySetInnerHTML={{ __html: video }}/>
-        <div className="z-50 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-          <img src="/product/video-play.png" alt="video-play" />
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: video }} className="iframe-container"/>
       </div>
     </div>
   );
