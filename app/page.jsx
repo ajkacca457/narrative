@@ -25,7 +25,7 @@ async function Home() {
     <div className="relative overflow-hidden">
       {/* HERO SECTION */}
       {acfContent.map((block, index) => {
-        if (block.acf_fc_layout === "front_hero") {
+        if (block.acf_fc_layout === "front_hero" && block.show_hero) {
           return <Hero key={index} content={block} />;
         }
         return null;
@@ -36,8 +36,18 @@ async function Home() {
         ["showreel", "display"].includes(block.acf_fc_layout)
       ) && (
         <>
-          <ShowReel />
-          <Display />
+          {acfContent.map((block, index) => {
+            if (block.acf_fc_layout === "showreel" && block.show_reel) {
+              return <ShowReel key={index} content={block} />;
+            }
+            return null;
+          })}
+          {acfContent.map((block, index) => {
+            if (block.acf_fc_layout === "display" && block.show_display) {
+              return <Display key={index} content={block} />;
+            }
+            return null;
+          })}
         </>
       )}
 
