@@ -19,7 +19,7 @@ const page = async () => {
   const acfContent = data?.[0]?.acf?.product_page || [];
 
   return (
-    <div className="product-page">
+    <div className="product-page relative overflow-hidden">
       {acfContent.map((block, index) => {
         if (
           block.acf_fc_layout === "product_hero" &&

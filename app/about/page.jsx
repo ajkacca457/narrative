@@ -17,7 +17,7 @@ const page = async () => {
   const acfContent = data?.[0]?.acf?.about_page || [];
 
   return (
-    <div>
+    <div className="relative overflow-hidden">
       {acfContent.map((block, index) => {
         if (
           block.acf_fc_layout === "about_hero" &&
@@ -29,7 +29,7 @@ const page = async () => {
       })}
 
       <div className="relative">
-        <div className="w-[800px] h-[800px] absolute -right-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
+        <div className="hidden md:block w-[800px] h-[800px] absolute -right-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
       </div>
 
       <div className="relative">
@@ -2866,8 +2866,8 @@ const page = async () => {
         })}
       </div>
       <div className="relative">
-        <div className="w-[800px] h-[800px] absolute -left-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
-        <div className="w-[800px] h-[800px] absolute left-1/2 transform -translate-x-1/2 bottom-[200px] -z-[1] radial-light opacity-40"></div>
+        <div className="hidden md:block w-[800px] h-[800px] absolute -left-[150px] top-[200px] -z-[1] radial-light opacity-40"></div>
+        <div className="hidden md:block w-[800px] h-[800px] absolute left-1/2 transform -translate-x-1/2 bottom-[200px] -z-[1] radial-light opacity-40"></div>
         <CircularPattern
           customClass="absolute left-[150px] top-[500px]"
           width="189.5"

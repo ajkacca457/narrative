@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-[800px] h-[800px] absolute -left-[250px] -top-[100px] z-[200] radial-light opacity-60"></div>
+      <div className="hidden md:block w-[800px] h-[800px] absolute -left-[250px] -top-[100px] z-[200] radial-light opacity-60"></div>
       {/* Desktop Navbar */}
       <div
         className={`fixed hidden md:flex top-0 left-0 w-full transition-transform duration-500 ease-in-out z-[300] ${

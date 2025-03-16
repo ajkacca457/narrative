@@ -62,10 +62,13 @@ const Expertise = ({ content }) => {
     // Infinite Horizontal Scroll for Scrollable Image
     if (scrollableImageRef.current) {
       gsap.to(scrollableImageRef.current, {
-        x: "-100%", 
-        repeat: -1, 
-        duration: 15,
-        ease: "linear",
+        x: "-110%", // Move fully to the left
+        duration: 10, // Adjust duration for smoothness
+        ease: "linear", // Ensures a smooth transition
+        repeat: -1, // Infinite loop
+        onComplete: () => {
+          gsap.set(scrollableImageRef.current, { x: "0%" }); // Instantly move it back to the right
+        },
       });
     }
   }, []);

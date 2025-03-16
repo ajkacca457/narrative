@@ -14,7 +14,7 @@ const page = async () => {
   const acfContent = data?.[0]?.acf?.contact_page || [];
 
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <div className="relative">
         <CircularPattern customClass="absolute top-[200px] left-[200px]" />
 
@@ -63,7 +63,7 @@ const page = async () => {
           if (block.acf_fc_layout === "faq" && block.show_faq === true) {
             return <ContactFaq key={index} content={block} />;
           }
-          return null;
+          return null; // Ensures nothing is rendered if the condition isn't met
         })}
       </div>
     </div>
