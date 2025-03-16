@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
 
-// Helper function to extract the YouTube video ID from the URL
 const getYouTubeVideoId = (url) => {
   const regExp =
     /(?:https?:\/\/(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|(?:https?:\/\/(?:www\.)?youtu\.be\/))([a-zA-Z0-9_-]{11})/;
@@ -12,47 +11,60 @@ const getYouTubeVideoId = (url) => {
 };
 
 const VideoPlayer = ({ url }) => {
+  const [isMounted, setIsMounted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [isClient, setIsClient] = useState(false);
+  const playerRef = useRef(null);
 
   useEffect(() => {
-    setIsClient(true); // Ensure client-side rendering
+    setIsMounted(true); // Ensure component is only rendered on the client
   }, []);
+
+  if (!isMounted) return null; // Prevent SSR mismatch
 
   const getModifiedYouTubeUrl = (url) => {
     const videoId = getYouTubeVideoId(url);
     if (videoId) {
-      return `https://www.youtube.com/embed/${videoId}?controls=0&modestbranding=1&rel=0&showinfo=0`;
+      return `https://www.youtube.com/embed/${videoId}?enablejsapi=1&controls=1&modestbranding=1&rel=0&showinfo=0`;
     }
     return url;
   };
-
-  if (!isClient) return null; // Prevent SSR issues
 
   const modifiedUrl = getModifiedYouTubeUrl(url);
 
   return (
     <div
       className="relative w-full"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => {
+        setIsHovered(true);
+        if (playerRef.current) {
+          playerRef.current.getInternalPlayer()?.playVideo(); // Play on hover
+        }
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        if (playerRef.current) {
+          playerRef.current.getInternalPlayer()?.pauseVideo(); // Pause when not hovered
+        }
+      }}
     >
       <ReactPlayer
-        key={isHovered ? "playing" : "stopped"} // Force remount on hover change
+        ref={playerRef}
         url={modifiedUrl}
-        playing={isHovered} // Play on hover, stop otherwise
-        controls={false}
-        allow= {isHovered ? "autoplay; encrypted-media" : "encrypted-media"}
+        playing={isHovered} // Play only when hovered
+        controls={true} // Show controls so user can unmute
+        muted={true} // Start muted so autoplay works
         width="100%"
         height="400px"
         className="rounded-lg overflow-hidden my-4"
         config={{
           youtube: {
             playerVars: {
-              controls: 0,
+              controls: 1, // Show controls
               modestbranding: 1,
               rel: 0,
               showinfo: 0,
+              mute: 1, // Start muted, user can unmute
+              autoplay: 0, // Start paused
             },
           },
         }}
