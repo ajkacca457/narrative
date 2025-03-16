@@ -37,34 +37,34 @@ const VideoPlayer = ({ url }) => {
       onMouseEnter={() => {
         setIsHovered(true);
         if (playerRef.current) {
-          playerRef.current.getInternalPlayer()?.playVideo(); // Play on hover
+          playerRef.current.getInternalPlayer()?.playVideo(); 
         }
       }}
       onMouseLeave={() => {
         setIsHovered(false);
         if (playerRef.current) {
-          playerRef.current.getInternalPlayer()?.pauseVideo(); // Pause when not hovered
+          playerRef.current.getInternalPlayer()?.pauseVideo(); 
         }
       }}
     >
       <ReactPlayer
         ref={playerRef}
         url={modifiedUrl}
-        playing={isHovered} // Play only when hovered
-        controls={true} // Show controls so user can unmute
-        muted={true} // Start muted so autoplay works
+        playing={isHovered} 
+        controls={true} 
+        muted={true} 
         width="100%"
         height="400px"
         className="rounded-lg overflow-hidden my-4"
         config={{
           youtube: {
             playerVars: {
-              controls: 1, // Show controls
+              controls: 1, 
               modestbranding: 1,
               rel: 0,
               showinfo: 0,
-              mute: 1, // Start muted, user can unmute
-              autoplay: 0, // Start paused
+              mute: 1, 
+              autoplay: 0, 
             },
           },
         }}
