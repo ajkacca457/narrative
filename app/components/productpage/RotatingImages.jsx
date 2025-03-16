@@ -13,14 +13,14 @@ const RotatingImages = ({ social_media }) => {
       setTimeout(() => {
         setImages((prevImages) => {
           const newImages = [...prevImages];
-          const lastImage = newImages.pop(); // Remove last image
-          newImages.unshift(lastImage); // Insert it at the beginning
+          const lastImage = newImages.pop(); 
+          newImages.unshift(lastImage); 
           return newImages;
         });
 
-        setIsAnimating(false); // Reset animation state
-      }, 500); // Animation duration (0.5s)
-    }, 1500); // Shift every 3 seconds
+        setIsAnimating(false); 
+      }, 500); 
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);

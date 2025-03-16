@@ -1,6 +1,18 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = async () => {
+  const res = await fetch(
+    "https://narrative-10a4cba.ingress-alpha.ewp.live/wp-json/acf/v2/options"
+  );
+  const data = await res.json();
+
+  const {
+    phone = "01715242124",
+    email = "narrative.media.bd@gmail.com",
+    policy_page = [],
+    social_links = [],
+  } = data || {};
+
   return (
     <div>
       <div className="max-w-[90rem] w-[90%] mx-auto pt-[5vh] pb-[20px] text-white">
@@ -9,32 +21,46 @@ const Footer = () => {
             <img src="./narrative-logo.png" alt="logo" className="mb-2" />
             <div className="flex items-center gap-x-2">
               {" "}
-              <img src="/green-arrow.png" /> <h3>( 021 ) 666 888 0000</h3>
+              <a href={`tel:${phone}`} className="flex items-center space-x-2">
+                <img src="/green-arrow.png" alt="Phone Icon" />
+                <h3>{phone}</h3>
+              </a>{" "}
             </div>
             <div className="flex items-center gap-x-2 mt-2">
               {" "}
-              <img src="/green-arrow.png" /> <h3>needhelp@company.com</h3>
+              <a
+                href={`mailto:${email}`}
+                className="flex items-center space-x-2"
+              >
+                <img src="/green-arrow.png" alt="Email Icon" />
+                <h3>{email}</h3>
+              </a>{" "}
             </div>
             <div className="flex items-center gap-x-2 mt-2">
-              <img src="/green-arrow.png" />
-              <p>Privacy Policy</p>
+              <a
+                href={policy_page.url}
+                alt="Policy Page"
+                className="flex items-center space-x-2"
+                target="_blank"
+              >
+                <img src="/green-arrow.png" />
+                <p>{policy_page.title}</p>
+              </a>
             </div>
           </div>
 
           <div>
-            <div className="grid grid-cols-2 gap-x-4 place-items-center my-10 md:my-0">
-              <button className="bg-[#00FFE1] transition-colors duration-300 hover:bg-[#00CCB5] text-black w-fit block px-4 py-2 mt-2 rounded col-span-1">
-                Facebook
-              </button>
-              <button className="bg-[#00FFE1] text-black w-fit block px-4 py-2 mt-2 rounded col-span-1">
-                Instagram
-              </button>
-              <button className="bg-[#00FFE1] text-black w-fit block px-4 py-2 mt-2 rounded col-span-1">
-                Instagram
-              </button>
-              <button className="bg-[#00FFE1] text-black w-fit block px-4 py-2 mt-2 rounded col-span-1">
-                Instagram
-              </button>
+            <div className="my-10 md:my-0">
+              {social_links.map((link, index) => (
+                <a
+                  href={link.link.url}
+                  key={index}
+                  target="_blank"
+                  className="bg-[#00FFE1] transition-colors duration-300 hover:bg-[#00CCB5] text-black w-full block px-4 py-2 mt-2 rounded col-span-1"
+                >
+                  {link.link.title}
+                </a>
+              ))}
             </div>
           </div>
         </div>

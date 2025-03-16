@@ -13,8 +13,6 @@ const ProductHero = ({ content }) => {
   const buttonRef = useRef(null);
   const svgPathRef = useRef(null);
 
-  console.log(social_media);
-
   useEffect(() => {
     const tl = gsap.timeline();
 
