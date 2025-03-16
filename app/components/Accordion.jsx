@@ -46,7 +46,7 @@ const Accordion = ({ accordionItems }) => {
     <div ref={accordionRef} className="accordion w-full col-span-2 opacity-0 relative z-[100]">
       {accordionItems.map(({ id, title, content }) => (
         <div key={id} className="border border-[#45454b] px-10 py-4 my-2 rounded-[60px] backdrop-blur-sm">
-          <button onClick={() => toggleAccordion(id)} className="w-full flex justify-between items-center py-5 text-white backdrop-blur-md">
+          <button onClick={() => toggleAccordion(id)} className="w-full flex justify-between items-center py-5 text-white">
             <span className="text-accordion-heading text-left">{title}</span>
             <span className="text-black bg-white p-4 rounded-full transition-transform duration-300">
               {openIndex === id ? minusSVG : plusSVG}

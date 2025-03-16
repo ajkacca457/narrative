@@ -53,7 +53,7 @@ const BrandCards = ({ content }) => {
   return (
     <div
       ref={sectionRef}
-      className="w-full brand-cards-element h-auto py-[20vh]"
+      className="w-full brand-cards-element h-auto py-[5vh] md:py-[20vh]"
     >
       <div className="brand-cards-container w-4/5 lg:w-3/5 mx-auto">
         <h1

@@ -95,13 +95,13 @@ const Hero = ({ content }) => {
       <div className="max-w-[1100px] text-center z-[100]">
         <h1
           ref={headingRef}
-          className="text-hero-front text-white text-left font-semibold opacity-0"
+          className="text-hero-front text-white font-semibold opacity-0 ml-10 text-left"
         >
           {hero_heading}
         </h1>
         <h5
           ref={subheadingRef}
-          className="text-[20px] ml-[100px] mt-[50px] text-left tracking-[.3em] text-white mt-6 uppercase opacity-0 hidden sm:block"
+          className="text-[20px] ml-[100px] mt-[50px] text-left tracking-[.3em] text-white uppercase opacity-0 hidden sm:block"
         >
           {hero_subheading}
         </h5>

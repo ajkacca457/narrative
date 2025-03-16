@@ -42,7 +42,7 @@ const BrandSquareCards = ({ content }) => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full square-cards h-auto py-[20vh] z-50 relative">
+    <div ref={sectionRef} className="w-full square-cards h-auto py-[5vh] md:py-[20vh] z-50 relative">
       <div className="how-we-do-tite mb-[5vh] text-center lg:text-left lg:ml-[20vw]">
         <h3 ref={titleRef} className="text-square-card-heading text-white uppercase opacity-0">
           <span className="opacity-60">{heading_}</span>{" "}

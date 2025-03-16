@@ -48,7 +48,7 @@ const AboutOurTeam = ({ content }) => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full about-expertise-element h-auto py-[20vh]">
+    <div ref={sectionRef} className="w-full about-expertise-element h-auto py-[5vh] md:py-[20vh]">
       <div className="about-expertise-container w-5/6 lg:w-2/4 mx-auto">
         <div>
         <h1

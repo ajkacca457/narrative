@@ -67,13 +67,13 @@ const Input = ({ content }) => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full input-element h-auto py-[20vh]">
+    <div ref={sectionRef} className="w-full input-element h-auto py-[5vh] md:py-[20vh]">
       <div className="input-element-container w-3/4 mx-auto">
-        <div className="grid grid-cols-2 gap-x-[5vw]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[5vw]">
           {/* Image */}
           <img ref={imageRef} src={input_image?.sizes?.large} alt="input-bg" className="opacity-0 w-full h-auto object-contain" />
 
-          <div className="text-white">
+          <div className="text-white mt-10 md:mt-0">
             {/* Heading */}
             <h3 className="text-input-heading font-semibold">
               <span ref={highlightRef} className="bg-[#00FFE1] text-black p-[5px] rounded-2xl opacity-0">
