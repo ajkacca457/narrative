@@ -406,3 +406,32 @@
   animation: rotateClockwise 4s infinite ease-in-out;
 }
 
+
+/* Keyframes for scrolling effect */
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(-100%); /* Start from the right side (offscreen) */
+  }
+  100% {
+    transform: translateX(100%); /* End on the left side (offscreen) */
+  }
+}
+/* Container to hold the images */
+.scrolling-images-container {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden; /* Hide overflowing images */
+  position: absolute;
+  bottom:0px;
+  width: 100%;
+}
+
+/* Image styling */
+.scrollable-image {
+  width: 100%;
+  height: auto;
+  margin-right: 10px; /* Space between images if needed */
+  animation: scrollLeftToRight 15s linear infinite; /* Apply infinite scroll animation */
+}
+
+
