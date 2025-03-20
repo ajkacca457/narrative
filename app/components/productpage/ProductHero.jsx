@@ -41,9 +41,9 @@ const ProductHero = ({ content }) => {
     tl.to(titleRef.current.children, {
       opacity: 1,
       y: 0,
-      duration: 0.05,
+      duration: 0.5,
       ease: "power2.out",
-      stagger: 0.1, // Stagger effect for words
+      stagger: 0.2, // Stagger effect for words
     });
 
     // Image animation: Slide in from the right
