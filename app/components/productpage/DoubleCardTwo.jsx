@@ -95,14 +95,14 @@ const DoubleCardTwo = ({ additional_package, title }) => {
                 className="double-card-content flex gap-x-4 items-center opacity-0" // Ensure opacity is 0 initially
               >
                 <div className="double-card-icon">{cardBlueIcon}</div>
-                <p className="text-white text-card-content double-card-title -mt-2">
+                <p className="text-white text-card-content double-card-title -mt-2 leading-1.5">
                   {card.content}
                 </p>
               </div>
             ))}
         </div>
 
-        <p className="text-white text-accordion-heading uppercase">
+        <p className="text-white text-accordion-heading ">
           {additional_package?.package_content}
         </p>
 

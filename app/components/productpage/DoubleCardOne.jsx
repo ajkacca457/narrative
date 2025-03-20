@@ -74,7 +74,7 @@ const DoubleCardOne = ({ core_package, title }) => {
               className="double-card-content flex gap-x-4 items-start mt-8 opacity-0"
             >
               <div className="double-card-icon">{cardIcon}</div>
-              <p className="text-white text-card-content double-card-title -mt-2">
+              <p className="text-white text-card-content double-card-title -mt-2 leading-1">
                 {card.content}
               </p>
             </div>
