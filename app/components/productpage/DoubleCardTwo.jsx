@@ -78,7 +78,7 @@ const DoubleCardTwo = ({ additional_package, title }) => {
   );
 
   return (
-    <div className="h-full">
+    <div className="h-full mt-8 md:mt-0">
       <h1 className="text-white double-cards-title text-card-one-heading col-span-full">
         {title}
       </h1>
@@ -92,7 +92,7 @@ const DoubleCardTwo = ({ additional_package, title }) => {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)} // Assign each ref
-                className="double-card-content flex gap-x-4 items-center opacity-0" // Ensure opacity is 0 initially
+                className="double-card-content flex gap-x-4 items-center opacity-0 mt-8" // Ensure opacity is 0 initially
               >
                 <div className="double-card-icon">{cardBlueIcon}</div>
                 <p className="text-white text-card-content double-card-title -mt-2 leading-1.5">
@@ -102,11 +102,11 @@ const DoubleCardTwo = ({ additional_package, title }) => {
             ))}
         </div>
 
-        <p className="text-white text-accordion-heading ">
+        <p className="text-white text-accordion-heading mt-8 md:mt-0">
           {additional_package?.package_content}
         </p>
 
-        <button className="bg-[#05A895] text-white w-fit mx-auto text-accordion-heading px-4 py-2 rounded-md mb-[10vh]">
+        <button className="bg-[#05A895] text-white w-fit mx-auto text-accordion-heading px-4 py-2 rounded-md mt-8 md:mt-0 mb-[10vh]">
           Schedule a call
         </button>
       </div>
