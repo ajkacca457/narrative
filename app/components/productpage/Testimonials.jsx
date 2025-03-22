@@ -78,7 +78,7 @@ const Testimonials = ({ content }) => {
   }, [cards]);
 
   return (
-    <div ref={testimonialsRef} className="w-full testimonial h-auto pb-[20vh] z-50 relative">
+    <div ref={testimonialsRef} className="w-full testimonial h-auto pb-[5vh] md:pb-[20vh] z-50 relative">
       <div className="testimonial-container w-4/5 xl:w-3/4 mx-auto">
         <p ref={topHeadingRef} className="text-center text-blue-800 font-semibold opacity-0">
           {top_heading}
@@ -91,9 +91,8 @@ const Testimonials = ({ content }) => {
           {cards.length > 0 &&
             cards.map((data, index) => (
               <div key={index} className="testimonial-card px-4">
-                <div className="testimonial-card-content bg-white mt-10 rounded-[1rem] p-8">
+                <div className="testimonial-card-content min-h-[250px] bg-white mt-10 rounded-[1rem] p-8 flex flex-col justify-between opacity-0" id={`card-${index}`}>
                   <p className="text-black text-[16px]">{data.content}</p>
-
                   <div className="flex mt-8">
                     <div className="profile-img mr-4">
                       {data?.person_photo?.sizes?.medium || profileImg}
