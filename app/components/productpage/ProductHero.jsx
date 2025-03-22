@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import CircularPattern from "../decors/CircularPattern";
-import RotatingImages from "./RotatingImages";
+import IconContainer from "./IconContainer";
 
 const ProductHero = ({ content }) => {
   const { heading = "", social_media = [] } = content || {};
@@ -104,7 +104,7 @@ const ProductHero = ({ content }) => {
               {heading}
             </h1>
           </div>
-          <RotatingImages social_media={social_media} />
+          <IconContainer social_media={social_media} />
         </div>
       </div>
     </div>
